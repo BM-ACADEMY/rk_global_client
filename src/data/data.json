@@ -1,0 +1,225 @@
+{
+  "Header": {
+    "logo":"img/logo.png",
+    "title": "We are a Landing Page",
+    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum."
+  },
+  "About": {
+    "paragraph": "<b>RK Global Associates</b> is a forward-thinking <b>technology solutions provider</b>, helping businesses navigate their <b>digital transformation</b> and achieve exceptional results. We specialize in delivering innovative, customized solutions in <b>Industrial & Commercial Solutions, Safety Equipment, Material Import & Export, Metal Fabrication & Engineering</b>, and <b>IT Consulting.</b><br><br>Adopting an agile, startup-like mindset, we focus on building strong and scalable strategies that enhance user engagement and drive business growth. With a commitment to excellence, we take a thorough, strategic approach to each project, ensuring that we understand every critical aspect before delivering solutions that matter.",
+    "Why": [
+      "Lorem ipsum dolor",
+      "Tempor incididunt",
+      "Lorem ipsum dolor",
+      "Incididunt ut labore"
+    ],
+    "Why2": [
+      "Aliquip ex ea commodo",
+      "Lorem ipsum dolor",
+      "Exercitation ullamco",
+      "Lorem ipsum dolor"
+    ]
+  },
+  "Gallery": [
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/01-large.jpg",
+      "smallImage": "img/portfolio/01-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/02-large.jpg",
+      "smallImage": "img/portfolio/02-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/03-large.jpg",
+      "smallImage": "img/portfolio/03-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/04-large.jpg",
+      "smallImage": "img/portfolio/04-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/05-large.jpg",
+      "smallImage": "img/portfolio/05-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/06-large.jpg",
+      "smallImage": "img/portfolio/06-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/07-large.jpg",
+      "smallImage": "img/portfolio/07-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/08-large.jpg",
+      "smallImage": "img/portfolio/08-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/09-large.jpg",
+      "smallImage": "img/portfolio/09-small.jpg"
+    }
+  ],
+ "Services": [
+  {
+    "icon": "fa fa-building",
+    "name": "Industrial & Commercial Division",
+    "text": "At RK Global Associates, our Industrial & Commercial Division offers tailored solutions to enhance operational efficiency and productivity. We help businesses streamline processes, reduce costs, and improve performance with expert system integration and machinery solutions, ensuring smooth operations in the industrial sector."
+  },
+  {
+    "icon": "fa fa-shield",
+    "name": "Safety Equipment",
+    "text": "We provide top-quality Safety Equipment to ensure workplace protection and regulatory compliance. Our range includes protective gear, helmets, safety harnesses, and more, designed to minimize risks and safeguard employees, creating a secure environment for businesses in various industries."
+  },
+  {
+    "icon": "fa fa-globe",
+    "name": "Material Import & Export",
+    "text": "RK Global Associates specializes in Material Import & Export, offering businesses reliable access to high-quality materials worldwide. Our services handle logistics, documentation, and compliance, ensuring timely deliveries and cost-effective solutions that expand your global reach."
+  },
+  {
+    "icon": "fa fa-cogs",
+    "name": "Metal Fabrication & Engineering",
+    "text": "We offer expert Metal Fabrication & Engineering services, delivering custom metal solutions for industrial applications. From design to installation, we provide durable, precision-engineered components, ensuring high-quality results for your business’s specific needs."
+  },
+  {
+    "icon": "fa fa-truck",
+    "name": "Logistics & Supply Chain Solutions",
+    "text": "Our Logistics & Supply Chain Solutions optimize the movement of materials and products from suppliers to customers. With a focus on cost-efficiency and reliability, we ensure your supply chain runs smoothly and products reach their destinations on time."
+  },
+  {
+    "icon": "fa fa-wrench",
+    "name": "Maintenance & Repair Services",
+    "text": "RK Global Associates offers comprehensive Maintenance & Repair Services for industrial equipment and machinery. Our expert team ensures that your systems are operational with minimal downtime, extending the lifespan of your assets and keeping production running smoothly."
+  }
+]
+,
+ "Testimonials": [
+    {
+      "img": "img/testimonials/01.jpg",
+      "title": "Excellent Service & Quality Products",
+      "text": "RK Global Associates has been a reliable partner for our industrial and commercial needs. Their high-quality safety equipment and commitment to safety standards have made our workplace much more secure. Highly recommended!",
+      "name": "Ethan"
+    },
+    {
+      "img": "img/testimonials/02.jpg",
+      "title": "Professional & Efficient Material Import & Export",
+      "text": "We have been sourcing industrial materials through RK Global Associates for over a year, and their import-export services are seamless. Timely delivery and exceptional customer service make them stand out in the industry.",
+      "name": "Noah"
+    },
+    {
+      "img": "img/testimonials/03.jpg",
+      "title": "Reliable Metal Fabrication & Engineering Solutions",
+      "text": "The metal fabrication services provided by RK Global Associates are top-notch. Their precision and attention to detail helped us complete our construction project on time. Great expertise in engineering!",
+      "name": "Lucas"
+    },
+    {
+      "img": "img/testimonials/04.jpg",
+      "title": "High-Quality Industrial & Commercial Products",
+      "text": "RK Global Associates has been our go-to supplier for industrial and commercial materials. Their wide range of products, combined with competitive pricing, makes them a trusted partner for our business.",
+      "name": "Olivia"
+    },
+    {
+      "img": "img/testimonials/05.jpg",
+      "title": "Best in Safety Equipment & Compliance",
+      "text": "When it comes to safety equipment, RK Global Associates never disappoints. Their products meet all safety regulations, and their team ensures we get the right solutions for our industry needs. Excellent service!",
+      "name": "Aiden"
+    }
+  ],
+  "Team": [
+    {
+      "img": "img/team/01.jpg",
+      "name": "John Doe",
+      "job": "Director"
+    },
+    {
+      "img": "img/team/02.jpg",
+      "name": "Mike Doe",
+      "job": "Senior Designer"
+    },
+    {
+      "img": "img/team/03.jpg",
+      "name": "Jane Doe",
+      "job": "Senior Designer"
+    },
+    {
+      "img": "img/team/04.jpg",
+      "name": "Karen Doe",
+      "job": "Project Manager"
+    }
+  ],
+  "Contact": {
+    "logo": "img/logo.png",
+    "address": "Erode TN ",
+    "phone": "+91 87605 77352",
+    "email": "info@company.com",
+    "facebook": "fb.com",
+    "twitter": "twitter.com",
+    "instagram": "https://www.instagram.com/rkglobalassociatees/",
+    "linkedin": "https://www.linkedin.com/in/raghul-kumaran-638b05140?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "youtube": "youtube.com",
+    "description": "At Rainpic Infotech, we transform ordinary real estate photos into stunning visuals that captivate buyers...",
+    "usefulLinks": [
+      { "name": "Home", "url": "header" },
+      { "name": "About", "url": "about" },
+      { "name": "IT Services", "url": "services" },
+      { "name": "Metal Fabrication & Engineering", "url": "works" },
+      { "name": "Career", "url": "works" },
+      { "name": "Contact us", "url": "contact" }
+    ],
+   "ourWorks": [
+  {
+    "name": "Industrial & Commercial Division",
+    "url": "services"
+  },
+  {
+    "name": "Safety Equipment",
+    "url": "services"
+  },
+  {
+    "name": "Material Import & Export",
+    "url": "services"
+  },
+  {
+    "name": "Metal Fabrication & Engineering",
+    "url": "services"
+  },
+  {
+    "name": "Logistics & Supply Chain Solutions",
+    "url": "services"
+  },
+  {
+    "name": "Maintenance & Repair Services",
+    "url": "services"
+  }
+]
+
+  },
+  "Features": [
+    {
+      "icon": "fa fa-comments-o",
+      "title": "Lorem ipsum",
+      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+    },
+    {
+      "icon": "fa fa-bullhorn",
+      "title": "Lorem ipsum",
+      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+    },
+    {
+      "icon": "fa fa-group",
+      "title": "Lorem ipsum",
+      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+    },
+    {
+      "icon": "fa fa-magic",
+      "title": "Lorem ipsum",
+      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+    }
+  ]
+}
