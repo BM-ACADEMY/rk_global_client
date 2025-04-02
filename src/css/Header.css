@@ -1,0 +1,135 @@
+/* Logo Styling */
+.header-logo {
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+
+/* Carousel Slide */
+.carousel-slide {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Full Width & Height Image */
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image covers the area without distortion */
+}
+
+/* Overlay Effect for Better Readability */
+.carousel-slide::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Dark overlay for better text visibility */
+    z-index: 1;
+}
+
+/* Text Styles */
+.carousel-slide h1 {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* font-size: 2.5rem; */
+    font-weight: bold;
+    color: white;
+    z-index: 2;
+    text-transform: uppercase;
+}
+
+.carousel-slide p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2rem;
+    color: #ddd;
+    z-index: 2;
+}
+
+/* Button Styling */
+.carousel-slide a.btn {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #9ACD32 ;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+.carousel-slide a.btn:hover {
+    background-color: #9ACD32 ;
+}
+
+/* Customize Bullet Indicators */
+.carousel .control-dots {
+    bottom: 15px;
+}
+
+.carousel .control-dots .dot {
+    background-color: white !important;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.carousel .control-dots .dot.selected {
+    background-color: #9ACD32  !important;
+    width: 14px;
+    height: 14px;
+}
+/* Custom Navigation Buttons */
+.custom-prev-button,
+.custom-next-button {
+    position: absolute;
+    bottom: 20px;  /* Align at bottom */
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 3;
+    transition: background 0.3s ease;
+}
+
+/* Position Previous Button */
+.custom-prev-button {
+    right: 80px;  /* Adjust for spacing */
+}
+
+/* Position Next Button */
+.custom-next-button {
+    right: 20px;  /* Align at bottom-right */
+}
+
+.custom-prev-button:hover,
+.custom-next-button:hover {
+    background: #9ACD32 ;
+}
+

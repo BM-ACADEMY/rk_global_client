@@ -166,7 +166,8 @@
 //     </div>
 //   );
 // };
-import React from "react";
+import React ,{useState,useEffect}from "react";
+import "../css/Contact.css";
 
 export const Contact = ({ data = {} }) => {
   // Provide an empty object as default
@@ -175,6 +176,7 @@ export const Contact = ({ data = {} }) => {
     address,
     phone,
     email,
+    mobile,
     facebook,
     twitter,
     youtube,
@@ -184,6 +186,26 @@ export const Contact = ({ data = {} }) => {
     usefulLinks,
     ourWorks,
   } = data; // Now it won't throw an error
+  const [isVisible, setIsVisible] = useState(false);
+  const [whatsappNumber,setWhatsappNumber] = useState("+91 1234567890");
+  // Function to handle scroll visibility
+  useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.scrollY > 200) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener("scroll", toggleVisibility);
+    return () => window.removeEventListener("scroll", toggleVisibility);
+  }, []);
+
+  // Scroll to top function
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <div>
@@ -215,7 +237,7 @@ export const Contact = ({ data = {} }) => {
                   height: "200px",
                 }}
               />
-              <p>{description || "Loading description..."}</p>
+              <p dangerouslySetInnerHTML={{ __html: description ? description : "loading..." }} />
             </div>
 
             {/* Second Column: Useful Links */}
@@ -230,7 +252,7 @@ export const Contact = ({ data = {} }) => {
                 {usefulLinks?.map((link, index) => (
                   <li key={index} style={{ cursor: "pointer" }}>
                     <a
-                   href={`#${link.url.replace(/\s+/g, '-').toLowerCase()}`}
+                      href={`#${link.url.replace(/\s+/g, "-").toLowerCase()}`}
                       style={{ textDecoration: "none", color: "inherit" }}
                     >
                       {link.name}
@@ -242,26 +264,25 @@ export const Contact = ({ data = {} }) => {
 
             {/* Third Column: Our Works */}
             <div
-  style={{
-    display: "flex",
-    flexDirection: "column",
-  }}
->
-  <h3>Our Works</h3>
-  <ul>
-    {ourWorks?.map((work, index) => (
-      <li key={index} style={{ cursor: "pointer" }}>
-        <a
-          href={`#${work.url.replace(/\s+/g, '-').toLowerCase()}`}
-          style={{ textDecoration: "none", color: "inherit" }}
-        >
-          {work.name}
-        </a>
-      </li>
-    )) || "Loading works..."}
-  </ul>
-</div>
-
+              style={{
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              <h3>Our Works</h3>
+              <ul>
+                {ourWorks?.map((work, index) => (
+                  <li key={index} style={{ cursor: "pointer" }}>
+                    <a
+                      href={`#${work.url.replace(/\s+/g, "-").toLowerCase()}`}
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
+                      {work.name}
+                    </a>
+                  </li>
+                )) || "Loading works..."}
+              </ul>
+            </div>
 
             {/* Fourth Column: Address */}
             <div
@@ -294,45 +315,48 @@ export const Contact = ({ data = {} }) => {
 
           {/* Bottom Social Icons */}
           <div className="col-md-12">
-            <div className="row">
-              <div className="social" style={{ textAlign: "center" }}>
-                <ul style={{ listStyle: "none", padding: "0" }}>
-                  <li style={{ display: "inline", margin: "0 10px" }}>
-                    <a href={facebook || "#"}>
-                      <i
-                        className="fa fa-facebook"
-                        style={{ fontSize: "24px" }}
-                      ></i>
-                    </a>
-                  </li>
-                  <li style={{ display: "inline", margin: "0 10px" }}>
-                    <a href={youtube || "#"}>
-                      <i
-                        className="fa fa-youtube"
-                        style={{ fontSize: "24px" }}
-                      ></i>
-                    </a>
-                  </li>
-                  <li style={{ display: "inline", margin: "0 10px" }}>
-                    <a href={instagram || "#"}>
-                      <i
-                        className="fa fa-instagram"
-                        style={{ fontSize: "24px" }}
-                      ></i>
-                    </a>
-                  </li>
-                  <li style={{ display: "inline", margin: "0 10px" }}>
-                    <a href={linkedin || "#"}>
-                      <i
-                        className="fa fa-linkedin"
-                        style={{ fontSize: "24px" }}
-                      ></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+        <div className="row">
+          <div className="social" style={{ textAlign: "center" }}>
+            <ul style={{ listStyle: "none", padding: "0" }}>
+              {/* <li style={{ display: "inline", margin: "0 10px" }}>
+                <a href="https://youtube.com">
+                  <i className="fa fa-youtube" style={{ fontSize: "24px" }}></i>
+                </a>
+              </li> */}
+              <li style={{ display: "inline", margin: "0 10px" }}>
+                <a href={ instagram || "https://instagram.com"}>
+                  <i className="fa fa-instagram" style={{ fontSize: "24px" }}></i>
+                </a>
+              </li>
+              <li style={{ display: "inline", margin: "0 10px" }}>
+                <a href={ linkedin ||  "https://linkedin.com"}>
+                  <i className="fa fa-linkedin" style={{ fontSize: "24px" }}></i>
+                </a>
+              </li>
+            </ul>
           </div>
+        </div>
+      </div>
+
+      {/* Floating WhatsApp & Arrow Up Buttons */}
+      <div className="floating-icons">
+        {/* WhatsApp Floating Button */}
+        <a
+          href={`https://wa.me/+91${mobile}`}
+          className="floating-btn whatsapp"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="fa fa-whatsapp"></i>
+        </a>
+
+        {/* Arrow Up Floating Button */}
+        {isVisible && (
+          <button className="floating-btn arrow-up" onClick={scrollToTop}>
+            <i className="fa fa-arrow-up"></i>
+          </button>
+        )}
+      </div>
         </div>
       </div>
 

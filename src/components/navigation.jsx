@@ -76,16 +76,22 @@
 // };
 
 
-import React from "react";
+import { useState } from "react";
+import "../css/Navigation.css";
 
 export const Navigation = (props) => {
-  const {logo}= props.data;
+  const { logo } = props.data;
+  const [openDropdown, setOpenDropdown] = useState(null);
+
+  const toggleDropdown = (menu) => {
+    setOpenDropdown(openDropdown === menu ? null : menu);
+  };
+
   return (
     <nav id="menu" className="navbar navbar-default navbar-fixed-top">
       <div className="container">
-        {/* Navbar Header - Logo & Mobile Toggle */}
+        {/* Navbar Header */}
         <div className="navbar-header">
-          {/* Mobile Menu Button */}
           <button
             type="button"
             className="navbar-toggle collapsed"
@@ -99,7 +105,6 @@ export const Navigation = (props) => {
             <span className="icon-bar"></span>
           </button>
 
-          {/* Logo with Home Link */}
           <a className="navbar-brand page-scroll" href="#page-top" style={{ display: "flex", alignItems: "center" }}>
             <img 
               src={logo} 
@@ -114,19 +119,41 @@ export const Navigation = (props) => {
           <ul className="nav navbar-nav navbar-right">
             <li><a href="#header" className="page-scroll">HOME</a></li>
             <li><a href="#about" className="page-scroll">ABOUT US</a></li>
-            
+
             {/* IT Service with Dropdown */}
             <li className="dropdown">
-              <a href="#" className="dropdown-toggle" data-toggle="dropdown">IT SERVICE <b className="caret"></b></a>
-              <ul className="dropdown-menu d-flex flex-column gap-4">
-                <li><a href="#services">Industrial & Commercial Division</a></li>
-                <li><a href="#services">Safety Equipment</a></li>
-                <li><a href="#services">Material Import & Export</a></li>
-                <li><a href="#services">Metal Fabrication & Engineering</a></li>
+              <a 
+                href="#" 
+                className="dropdown-toggle"
+                onClick={() => toggleDropdown("it-service")}
+              >
+                IT SERVICE <b className="caret"></b>
+              </a>
+              <ul className={`dropdown-menu ${openDropdown === "it-service" ? "show" : ""}`}>
+                <li><a href="#services">Digital Transformation</a></li>
+                <li><a href="#services">Digital Engineering</a></li>
+                <li><a href="#services">Managed IT</a></li>
+                <li><a href="#services">Staff Augmentation</a></li>
               </ul>
             </li>
-            
-            <li><a href="#fabrication" className="page-scroll">METAL FABRICATION & ENGINEERING</a></li>
+
+            {/* Metal Fabrication Dropdown */}
+            <li className="dropdown">
+              <a 
+                href="#" 
+                className="dropdown-toggle"
+                onClick={() => toggleDropdown("metal-fabrication")}
+              >
+                METAL FABRICATION & ENGINEERING <b className="caret"></b>
+              </a>
+              <ul className={`dropdown-menu ${openDropdown === "metal-fabrication" ? "show" : ""}`}>
+                <li><a href="#metal">Industrial & Commercial Division</a></li>
+                <li><a href="#metal">Safety Equipment</a></li>
+                <li><a href="#metal">Material Import & Export</a></li>
+                <li><a href="#metal">Metal Fabrication & Engineering</a></li>
+              </ul>
+            </li>
+
             <li><a href="#career" className="page-scroll">CAREER</a></li>
             <li><a href="#contact" className="page-scroll">CONTACT</a></li>
           </ul>
@@ -135,4 +162,5 @@ export const Navigation = (props) => {
     </nav>
   );
 };
+
 

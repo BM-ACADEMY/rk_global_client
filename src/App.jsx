@@ -49,6 +49,7 @@ import { Contact } from "./components/contact";
 import JsonData from "./data/data.json";
 import SmoothScroll from "smooth-scroll";
 import "./App.css";
+import {MetalFabric} from "./components/MetalFabric";
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000,
@@ -64,9 +65,10 @@ const App = () => {
   return (
     <div>
       <Navigation data={landingPageData.Header || {}} />
-      <Header data={landingPageData.Header || {}} />
+      <Header data={landingPageData.Header || {}}  carousel={landingPageData.HeaderData || {}}/>
       <About data={landingPageData.About} />
       <Services data={landingPageData.Services} />
+      <MetalFabric data={landingPageData.MetalFabric || []} />
       <Testimonials data={landingPageData.Testimonials || []} />
       <Contact data={landingPageData.Contact} />
     </div>

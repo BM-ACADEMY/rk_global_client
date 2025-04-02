@@ -1,8 +1,27 @@
 {
   "Header": {
-    "logo":"img/logo.png",
+    "logo": "img/logo.png",
     "title": "We are a Landing Page",
     "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum."
+  },
+  "HeaderData": {
+    "slides": [
+      {
+        "image": "img/intro-bg.jpg",
+        "text": "We are a Landing Page",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      },
+      {
+        "image": "img/intro-bg.jpg",
+        "text": "Explore Our Services",
+        "description": "We provide world-class IT solutions for your business."
+      },
+      {
+        "image": "img/intro-bg.jpg",
+        "text": "Join Our Team",
+        "description": "Exciting career opportunities are waiting for you!"
+      }
+    ]
   },
   "About": {
     "paragraph": "<b>RK Global Associates</b> is a forward-thinking <b>technology solutions provider</b>, helping businesses navigate their <b>digital transformation</b> and achieve exceptional results. We specialize in delivering innovative, customized solutions in <b>Industrial & Commercial Solutions, Safety Equipment, Material Import & Export, Metal Fabrication & Engineering</b>, and <b>IT Consulting.</b><br><br>Adopting an agile, startup-like mindset, we focus on building strong and scalable strategies that enhance user engagement and drive business growth. With a commitment to excellence, we take a thorough, strategic approach to each project, ensuring that we understand every critical aspect before delivering solutions that matter.",
@@ -66,40 +85,60 @@
       "smallImage": "img/portfolio/09-small.jpg"
     }
   ],
- "Services": [
-  {
-    "icon": "fa fa-building",
-    "name": "Industrial & Commercial Division",
-    "text": "At RK Global Associates, our Industrial & Commercial Division offers tailored solutions to enhance operational efficiency and productivity. We help businesses streamline processes, reduce costs, and improve performance with expert system integration and machinery solutions, ensuring smooth operations in the industrial sector."
-  },
-  {
-    "icon": "fa fa-shield",
-    "name": "Safety Equipment",
-    "text": "We provide top-quality Safety Equipment to ensure workplace protection and regulatory compliance. Our range includes protective gear, helmets, safety harnesses, and more, designed to minimize risks and safeguard employees, creating a secure environment for businesses in various industries."
-  },
-  {
-    "icon": "fa fa-globe",
-    "name": "Material Import & Export",
-    "text": "RK Global Associates specializes in Material Import & Export, offering businesses reliable access to high-quality materials worldwide. Our services handle logistics, documentation, and compliance, ensuring timely deliveries and cost-effective solutions that expand your global reach."
-  },
-  {
-    "icon": "fa fa-cogs",
-    "name": "Metal Fabrication & Engineering",
-    "text": "We offer expert Metal Fabrication & Engineering services, delivering custom metal solutions for industrial applications. From design to installation, we provide durable, precision-engineered components, ensuring high-quality results for your business’s specific needs."
-  },
-  {
-    "icon": "fa fa-truck",
-    "name": "Logistics & Supply Chain Solutions",
-    "text": "Our Logistics & Supply Chain Solutions optimize the movement of materials and products from suppliers to customers. With a focus on cost-efficiency and reliability, we ensure your supply chain runs smoothly and products reach their destinations on time."
-  },
-  {
-    "icon": "fa fa-wrench",
-    "name": "Maintenance & Repair Services",
-    "text": "RK Global Associates offers comprehensive Maintenance & Repair Services for industrial equipment and machinery. Our expert team ensures that your systems are operational with minimal downtime, extending the lifespan of your assets and keeping production running smoothly."
-  }
-]
-,
- "Testimonials": [
+  "Services": [
+    {
+      "icon": "fa fa-cloud",
+      "name": "Digital Transformation",
+      "text": "We specialize in modernizing business operations through cloud migration (AWS, Azure, Google Cloud) and leverage AI-driven analytics and Robotic Process Automation (RPA) to optimize workflows, enhance efficiency, and reduce costs."
+    },
+    {
+      "icon": "fa fa-shield",
+      "name": "Managed IT Services",
+      "text": "Our managed IT services ensure your infrastructure is secure and operational 24/7, offering continuous monitoring, advanced cybersecurity, disaster recovery, and dedicated helpdesk support to minimize downtime."
+    },
+    {
+      "icon": "fa fa-code",
+      "name": "Digital Engineering",
+      "text": "We deliver custom software solutions and digital engineering services, including web and mobile applications. Our expertise covers automation, AI solutions, and seamless system integration for optimized business processes."
+    },
+    {
+      "icon": "fa fa-users",
+      "name": "Staff Augmentation",
+      "text": "Quickly fill skill gaps with our staff augmentation services, offering flexible hiring models (CtoH, CtoC, remote teams) and access to a global pool of skilled IT professionals."
+    },
+    {
+      "icon": "fa fa-users",
+      "name": "Hire Developer",
+      "text": "Access dedicated IT professionals in web/mobile development, Cloud, DevOps, and AI/data science, employing an Agile approach to ensure fast, iterative progress that integrates with your existing team."
+    }
+  ],
+  "MetalFabric": [
+    {
+      "id": 1,
+      "title": "Industrial & Commercial Division",
+      "description": "RK Global Associates enhances operational efficiency with expert system integration and machinery solutions, helping businesses streamline processes, reduce costs, and boost performance.",
+      "icon": "fa fa-building"
+    },
+    {
+      "id": 2,
+      "title": "Safety Equipment",
+      "description": "We provide high-quality safety gear, including helmets, harnesses, and protective equipment, ensuring workplace safety, risk reduction, and regulatory compliance.",
+      "icon": "fa fa-shield"
+    },
+    {
+      "id": 3,
+      "title": "Material Import & Export",
+      "description": "We specialize in global material sourcing, managing logistics, compliance, and timely deliveries to support seamless international trade and expand your market reach.",
+      "icon": "fa fa-ship"
+    },
+    {
+      "id": 4,
+      "title": "Metal Fabrication & Engineering",
+      "description": "Our custom metal fabrication solutions ensure precision, durability, and quality, catering to diverse industrial applications, from design to final installation.",
+      "icon": "fa fa-cogs"
+    }
+  ],
+  "Testimonials": [
     {
       "img": "img/testimonials/01.jpg",
       "title": "Excellent Service & Quality Products",
@@ -153,53 +192,55 @@
       "job": "Project Manager"
     }
   ],
+
   "Contact": {
     "logo": "img/logo.png",
-    "address": "Erode TN ",
+    "address": "Erode TN",
     "phone": "+91 87605 77352",
+    "mobile": "8760577352",
     "email": "info@company.com",
     "facebook": "fb.com",
     "twitter": "twitter.com",
     "instagram": "https://www.instagram.com/rkglobalassociatees/",
     "linkedin": "https://www.linkedin.com/in/raghul-kumaran-638b05140?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     "youtube": "youtube.com",
-    "description": "At Rainpic Infotech, we transform ordinary real estate photos into stunning visuals that captivate buyers...",
+    "description": "<b>RK Global Associates</b> is a<br> forward-thinking <b>technology solutions provider</b>,<br> helping businesses navigate their <b>digital<br> transformation</b> and achieve exceptional results.<br> We specialize in delivering innovative,<br> customized solutions in <b>Industrial & Commercial<br> Solutions, Safety Equipment, Material Import<br> & Export, Metal Fabrication & Engineering</b>,<br> and <b>IT Consulting.</b>",
     "usefulLinks": [
       { "name": "Home", "url": "header" },
       { "name": "About", "url": "about" },
       { "name": "IT Services", "url": "services" },
       { "name": "Metal Fabrication & Engineering", "url": "works" },
-      { "name": "Career", "url": "works" },
+      { "name": "Career", "url": "career" },
       { "name": "Contact us", "url": "contact" }
     ],
-   "ourWorks": [
-  {
-    "name": "Industrial & Commercial Division",
-    "url": "services"
+    "ourWorks": [
+      {
+        "name": "Industrial & Commercial Division",
+        "url": "services"
+      },
+      {
+        "name": "Safety Equipment",
+        "url": "services"
+      },
+      {
+        "name": "Material Import & Export",
+        "url": "services"
+      },
+      {
+        "name": "Metal Fabrication & Engineering",
+        "url": "services"
+      },
+      {
+        "name": "Logistics & Supply Chain Solutions",
+        "url": "services"
+      },
+      {
+        "name": "Maintenance & Repair Services",
+        "url": "services"
+      }
+    ]
   },
-  {
-    "name": "Safety Equipment",
-    "url": "services"
-  },
-  {
-    "name": "Material Import & Export",
-    "url": "services"
-  },
-  {
-    "name": "Metal Fabrication & Engineering",
-    "url": "services"
-  },
-  {
-    "name": "Logistics & Supply Chain Solutions",
-    "url": "services"
-  },
-  {
-    "name": "Maintenance & Repair Services",
-    "url": "services"
-  }
-]
 
-  },
   "Features": [
     {
       "icon": "fa fa-comments-o",

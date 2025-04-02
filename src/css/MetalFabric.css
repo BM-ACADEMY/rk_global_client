@@ -1,0 +1,71 @@
+/* Container Styling */
+.metalfabric-container {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
+  border-radius: 20px;
+  padding: 20px;
+  height: 40vh;
+  margin: 20px;
+}
+
+@media (min-width: 768px) {
+  .metalfabric-container {
+    flex-direction: row;
+  }
+}
+
+/* Sidebar Styling */
+.sidebar {
+  flex: 1;
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar Items */
+.service-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #f8f9fa;
+  transition: all 0.3s ease-in-out;
+}
+
+.service-item.active,
+.service-item:hover {
+  background-color: #9ACD32; /* Yellow-Green */
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Content Section */
+.content {
+  flex: 2;
+  color: white;
+  padding: 20px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.description {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .content {
+    padding: 10px;
+    text-align: center;
+  }
+}

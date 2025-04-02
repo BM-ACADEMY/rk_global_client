@@ -204,12 +204,13 @@ a:focus,
   outline-offset: none;
 }
 /* Header Section */
-.intro {
+/* .intro {
   display: table;
   width: 100%;
   padding: 0;
-  background: url(../img/intro-bg.jpg) center center no-repeat;
-  background-color: #e5e5e5;
+  height: 60vh;
+  /* background: url(../img/intro-bg.jpg) center center no-repeat; 
+  /* background-color: #e5e5e5;s 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -243,7 +244,7 @@ header .intro-text {
   padding-top: 350px;
   padding-bottom: 200px;
   text-align: center;
-}
+} */
 /* Features Section */
 #features {
   background: #f6f6f6;
