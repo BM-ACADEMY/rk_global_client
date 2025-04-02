@@ -23,21 +23,25 @@
       }
     ]
   },
-  "About": {
-    "paragraph": "<b>RK Global Associates</b> is a forward-thinking <b>technology solutions provider</b>, helping businesses navigate their <b>digital transformation</b> and achieve exceptional results. We specialize in delivering innovative, customized solutions in <b>Industrial & Commercial Solutions, Safety Equipment, Material Import & Export, Metal Fabrication & Engineering</b>, and <b>IT Consulting.</b><br><br>Adopting an agile, startup-like mindset, we focus on building strong and scalable strategies that enhance user engagement and drive business growth. With a commitment to excellence, we take a thorough, strategic approach to each project, ensuring that we understand every critical aspect before delivering solutions that matter.",
-    "Why": [
-      "Lorem ipsum dolor",
-      "Tempor incididunt",
-      "Lorem ipsum dolor",
-      "Incididunt ut labore"
+
+    "About": {
+    "Paragraph": [
+    "RK Global Associates is a forward-thinking technology solutions provider, helping businesses navigate their digital transformation and achieve exceptional results.",
+    "We specialize in delivering innovative, customized solutions in Industrial & Commercial Solutions, Safety Equipment, Material Import & Export, Metal Fabrication & Engineering, and IT Consulting.",
+    "Adopting an agile, startup-like mindset, we focus on building strong and scalable strategies that enhance user engagement and drive business growth.",
+    "With a commitment to excellence, we take a thorough, strategic approach to each project, ensuring that we understand every critical aspect before delivering solutions that matter."
     ],
-    "Why2": [
-      "Aliquip ex ea commodo",
-      "Lorem ipsum dolor",
-      "Exercitation ullamco",
-      "Lorem ipsum dolor"
+    "Mission": "To be a trusted global partner delivering transformative IT solutions, workforce development programs, precision-driven industrial services, and efficient global trade operations, helping businesses optimize performance, efficiency, and market reach.",
+    "Vision": "To lead the way in technology, training, industrial innovation, and international trade, setting benchmarks in quality, sustainability, and client-centric excellence.",
+    "CoreValues": [
+    "Innovation & Excellence – Continuously pushing the boundaries to deliver high-performance solutions.",
+    "Client-Centric Approach – Customizing services to align with unique business needs and goals.",
+    "Integrity & Accountability – Conducting business with transparency, professionalism, and responsibility.",
+    "Global Perspective with Local Expertise – Bridging markets with deep industry insights and global best practices.",
+    "Sustainability & Ethical Growth – Driving business success while ensuring environmental and social responsibility."
     ]
-  },
+    },
+    
   "Gallery": [
     {
       "title": "Project Title",
