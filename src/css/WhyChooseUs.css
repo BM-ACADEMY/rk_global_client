@@ -1,0 +1,197 @@
+/* .feature-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin: 10px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+  }
+  
+  .card-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+  
+  .card-description {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    opacity: 0;
+  }
+  
+  .feature-card:hover .card-content {
+    opacity: 0;
+  }
+  
+  .feature-card:hover .card-description {
+    opacity: 1;
+  }
+  
+  .feature-card i {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .feature-card:hover i {
+    transform: scale(1.1);
+  }
+  
+  @media (max-width: 768px) {
+    .feature-card {
+      height: auto;
+      padding: 20px;
+    }
+    .card-description {
+      width: 100%;
+    }
+  } */
+
+
+  /* Section Styling */
+.features-section {
+    padding: 60px 0px;
+    background: #f3f4f6;
+  }
+  
+  /* Main Heading */
+  .main-about-title {
+    font-size: 3rem;
+    font-weight: 400;
+    color: #2c3e50;
+    line-height: 1.5;
+    text-transform: uppercase;
+    font-family: var(--font2);
+    margin-bottom: 2.3rem;
+    position: relative;
+    text-align: center;
+  }
+  
+  /* Card Styling */
+  .feature-card {
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    transition: background-color 0.5s ease-in-out, transform 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 10px;
+  }
+  
+  /* Underline Effect */
+  .feature-card::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: #0111b5;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+    transform: translateX(-50%);
+  }
+  
+  /* Hover Effect */
+  .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Hover Effect for Odd Cards */
+  .feature-card.odd:hover {
+    background-color: #d3f67a31; /* Light Green */
+  }
+  
+  /* Hover Effect for Even Cards */
+  .feature-card.even:hover {
+    background-color: #b8d5f367; /* Light Blue */
+  }
+  
+  .feature-card:hover::after {
+    width: 100%;
+  }
+  
+  /* Icon Container */
+  .icon-container {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    height: 60px;
+  }
+  
+  /* Icon Styling */
+  .icon {
+    width: 100px !important;
+    height: 100px !important;
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  /* Smooth Icon Hover */
+  .feature-card:hover .icon {
+    transform: scale(1.2) rotate(8deg);
+  }
+  
+  /* Hide the title and text initially */
+  .feature-text {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out;
+  }
+  
+  /* Show the title and text only when hovering */
+  .feature-card:hover .feature-text {
+    opacity: 1;
+    height: auto;
+  }
+  
+  /* Feature Title */
+  .feature-title {
+    font-weight: 400;
+    font-size: 1.2rem;
+    font-family: var(--font3);
+    color: #333;
+    margin-top: 10px;
+  }
+  
+  /* Feature Text */
+  .feature-text {
+    font-size: 0.95rem;
+    color: #666;
+    font-family: var(--font3);
+    margin-top: 8px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 991px) {
+    .main-about-title {
+      font-size: 2.5rem;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .main-about-title {
+      font-size: 2rem;
+    }
+  
+    .feature-card {
+      height: auto;
+      padding: 15px;
+    }
+  }

@@ -76,24 +76,39 @@
 // };
 
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../css/Navigation.css";
-import JobApplicationForm from "../components/Career"; // Import the Job Application Modal
-import { AppBar, Toolbar, Button, Menu, MenuItem, Dialog } from "@mui/material";
+import JobApplicationForm from "../components/Career"; 
+import { Dialog } from "@mui/material";
+
 export const Navigation = (props) => {
   const { logo } = props.data;
   const [openDropdown, setOpenDropdown] = useState(null);
-  const [showModal, setShowModal] = useState(false); // Modal state
-  const handleOpenModal = () => setOpenModal(true);
-  const handleCloseModal = () => setOpenModal(false); 
-  const [anchorEl, setAnchorEl] = useState(null);
   const [openModal, setOpenModal] = useState(false);
+  const [activeSection, setActiveSection] = useState(""); // Track active section
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll("section[id]");
+      let currentSection = "";
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 80; // Adjust for navbar height
+        if (window.scrollY >= sectionTop) {
+          currentSection = section.getAttribute("id");
+        }
+      });
+
+      setActiveSection(currentSection);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const toggleDropdown = (menu) => {
     setOpenDropdown(openDropdown === menu ? null : menu);
   };
-
-  const handleShow = () => setShowModal(true);
-  const handleClose = () => setShowModal(false);
 
   return (
     <>
@@ -126,11 +141,15 @@ export const Navigation = (props) => {
           {/* Collapsible Menu */}
           <div className="collapse navbar-collapse" id="navbar-menu">
             <ul className="nav navbar-nav navbar-right">
-              <li><a href="#header" className="page-scroll">HOME</a></li>
-              <li><a href="#about" className="page-scroll">ABOUT US</a></li>
+              <li className={activeSection === "header" ? "active" : ""}>
+                <a href="#header" className="page-scroll">HOME</a>
+              </li>
+              <li className={activeSection === "about" ? "active" : ""}>
+                <a href="#about" className="page-scroll">ABOUT US</a>
+              </li>
 
               {/* IT Service with Dropdown */}
-              <li className="dropdown">
+              <li className={`dropdown ${openDropdown === "it-service" ? "open" : ""}`}>
                 <a 
                   href="#" 
                   className="dropdown-toggle"
@@ -138,7 +157,7 @@ export const Navigation = (props) => {
                 >
                   IT SERVICE <b className="caret"></b>
                 </a>
-                <ul className={`dropdown-menu ${openDropdown === "it-service" ? "show" : ""}`}>
+                <ul className="dropdown-menu">
                   <li><a href="#services">Digital Transformation</a></li>
                   <li><a href="#services">Digital Engineering</a></li>
                   <li><a href="#services">Managed IT</a></li>
@@ -147,7 +166,7 @@ export const Navigation = (props) => {
               </li>
 
               {/* Metal Fabrication Dropdown */}
-              <li className="dropdown">
+              <li className={`dropdown ${openDropdown === "metal-fabrication" ? "open" : ""}`}>
                 <a 
                   href="#" 
                   className="dropdown-toggle"
@@ -155,7 +174,7 @@ export const Navigation = (props) => {
                 >
                   METAL FABRICATION & ENGINEERING <b className="caret"></b>
                 </a>
-                <ul className={`dropdown-menu ${openDropdown === "metal-fabrication" ? "show" : ""}`}>
+                <ul className="dropdown-menu">
                   <li><a href="#metal">Industrial & Commercial Division</a></li>
                   <li><a href="#metal">Safety Equipment</a></li>
                   <li><a href="#metal">Material Import & Export</a></li>
@@ -165,19 +184,24 @@ export const Navigation = (props) => {
 
               {/* Career link triggers modal */}
               <li>
-                <a href="#" onClick={handleOpenModal}>
-                  CAREER
+                <a href="#" onClick={() => setOpenModal(true)}>
+                  APPLY QUERY
                 </a>
               </li>
-              <li><a href="#contact" className="page-scroll">CONTACT</a></li>
+              
+              <li className={activeSection === "contact" ? "active" : ""}>
+                <a href="#contact" className="page-scroll">CONTACT</a>
+              </li>
             </ul>
           </div>
         </div>
       </nav>
-      <Dialog open={openModal} onClose={handleCloseModal} maxWidth="md" fullWidth>
-        <JobApplicationForm handleClose={handleCloseModal} />
+
+      {/* Modal */}
+      <Dialog open={openModal} onClose={() => setOpenModal(false)} maxWidth="md" fullWidth>
+        <JobApplicationForm handleClose={() => setOpenModal(false)} />
       </Dialog>
-    
     </>
   );
 };
+

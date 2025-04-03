@@ -19,7 +19,7 @@ export const About = ({ data }) => {
             <p
               className="text-muted"
               dangerouslySetInnerHTML={{
-                __html: data ? data.Paragraph.join(" ") : "Loading...",
+                __html: data ? data.Paragraph : "Loading...",
               }}
               style={{ lineHeight: "3rem" }}
             />

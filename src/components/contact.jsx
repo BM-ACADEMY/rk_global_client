@@ -210,8 +210,8 @@ export const Contact = ({ data = {} }) => {
 
   return (
     <div>
-      <div id="contact" style={{ display: "flex", justifyContent: "center" }}>
-        <div className="container" style={{ width: "100%" }}>
+      <div id="contact" style={{ display: "flex",  }}>
+        <div className="" style={{ width: "100%" }}>
           <div className="container py-md-4 py-lg-4">
             <div className="row justify-content-center align-items-center g-5">
               {/* First Column: Logo and Description */}
@@ -268,48 +268,46 @@ export const Contact = ({ data = {} }) => {
               {/* Fourth Column: Address */}
               <div className="col-12 col-md-6 col-lg-3 ">
                 <h3>Contact Info</h3>
-                <p>
+                <p style={{display:"flex",gap:"3px",alignItems:"center"}}>
                   <i className="fa fa-map-marker me-2"></i>
                   <span>Address:</span> {address || "Loading address..."}
                 </p>
-                <p>
+                <p style={{display:"flex",gap:"3px",alignItems:"center"}}>
                   <i className="fa fa-phone me-2"></i>
                   <span>Phone:</span> {phone || "Loading phone..."}
                 </p>
-                <p>
+                <p style={{display:"flex",gap:"3px",alignItems:"center"}}>
                   <i className="fa fa-envelope-o me-2"></i>
                   <span>Email:</span> {email || "Loading email..."}
                 </p>
+                <div className="row">
+                  <div className="social">
+                    <ul style={{ listStyle: "none", padding: "0" }}>
+                      <li style={{ display: "inline", margin: "0 10px" }}>
+                        <a href={instagram || "https://instagram.com"}>
+                          <i
+                            className="fa fa-instagram"
+                            style={{ fontSize: "24px" }}
+                          ></i>
+                        </a>
+                      </li>
+                      <li style={{ display: "inline", margin: "0 10px" }}>
+                        <a href={linkedin || "https://linkedin.com"}>
+                          <i
+                            className="fa fa-linkedin"
+                            style={{ fontSize: "24px" }}
+                          ></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Bottom Social Icons */}
-          <div className="col-md-12">
-            <div className="row">
-              <div className="social" style={{ textAlign: "center" }}>
-                <ul style={{ listStyle: "none", padding: "0" }}>
-              
-                  <li style={{ display: "inline", margin: "0 10px" }}>
-                    <a href={instagram || "https://instagram.com"}>
-                      <i
-                        className="fa fa-instagram"
-                        style={{ fontSize: "24px" }}
-                      ></i>
-                    </a>
-                  </li>
-                  <li style={{ display: "inline", margin: "0 10px" }}>
-                    <a href={linkedin || "https://linkedin.com"}>
-                      <i
-                        className="fa fa-linkedin"
-                        style={{ fontSize: "24px" }}
-                      ></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+     
+          {/* <div className="col-md-12"></div> */}
 
           {/* Floating WhatsApp & Arrow Up Buttons */}
           <div className="floating-icons">

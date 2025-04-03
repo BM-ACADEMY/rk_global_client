@@ -7,29 +7,25 @@
   "HeaderData": {
     "slides": [
       {
-        "image": "img/intro-bg.jpg",
+        "image": "img/technology.jpg",
         "text": "We are a Landing Page",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
       },
       {
-        "image": "img/intro-bg.jpg",
+        "image": "img/import.jpg",
         "text": "Explore Our Services",
         "description": "We provide world-class IT solutions for your business."
       },
       {
-        "image": "img/intro-bg.jpg",
+        "image": "img/metal.jpg",
         "text": "Join Our Team",
         "description": "Exciting career opportunities are waiting for you!"
       }
     ]
   },
-
   "About": {
     "Paragraph": [
-      "RK Global Associates is a forward-thinking technology solutions provider, helping businesses navigate their digital transformation and achieve exceptional results.",
-      "We specialize in delivering innovative, customized solutions in Industrial & Commercial Solutions, Safety Equipment, Material Import & Export, Metal Fabrication & Engineering, and IT Consulting.",
-      "Adopting an agile, startup-like mindset, we focus on building strong and scalable strategies that enhance user engagement and drive business growth.",
-      "With a commitment to excellence, we take a thorough, strategic approach to each project, ensuring that we understand every critical aspect before delivering solutions that matter."
+      "<b>RK Global Associates</b> is a forward-thinking <b>technology solutions provider</b>, helping businesses navigate their<b> digital transformation</b> and achieve exceptional results. We specialize in delivering innovative, customized solutions in <b>Industrial & Commercial Solutions, Safety Equipment, Material Import & Export, Metal Fabrication & Engineering, and  IT Consulting.</b> Adopting an agile, startup-like mindset, we focus on building strong and scalable strategies that enhance user engagement and drive business growth. With a commitment to excellence, we take a thorough, strategic approach to each project, ensuring that we understand every critical aspect before delivering solutions that matter."
     ],
     "Mission": {
       "Text": "To be a trusted global partner delivering transformative IT solutions, workforce development programs, precision-driven industrial services, and efficient global trade operations, helping businesses optimize performance, efficiency, and market reach.",
@@ -211,19 +207,19 @@
     "address": "Erode TN",
     "phone": "+91 87605 77352",
     "mobile": "8760577352",
-    "email": "info@company.com",
+    "email": "rkglobalassociate@gmail.com",
     "facebook": "fb.com",
     "twitter": "twitter.com",
     "instagram": "https://www.instagram.com/rkglobalassociatees/",
     "linkedin": "https://www.linkedin.com/in/raghul-kumaran-638b05140?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     "youtube": "youtube.com",
-    "description": "<b>RK Global Associates</b> is a<br> forward-thinking <b>technology solutions provider</b>,<br> helping businesses navigate their <b>digital<br> transformation</b> and achieve exceptional results.<br> We specialize in delivering innovative,<br> customized solutions in <b>Industrial & Commercial<br> Solutions, Safety Equipment, Material Import<br> & Export, Metal Fabrication & Engineering</b>,<br> and <b>IT Consulting.</b>",
+    "description": "<b>RK Global Associates</b> is a forward-thinking <b>technology solutions provider</b>, helping businesses navigate their <b>digital transformation</b> and achieve exceptional results.We specialize in delivering innovative, customized solutions in <b>Industrial & Commercial<br> Solutions, Safety Equipment, Material Import & Export, Metal Fabrication & Engineering</b>,and <b>IT Consulting.</b>",
     "usefulLinks": [
       { "name": "Home", "url": "header" },
       { "name": "About", "url": "about" },
       { "name": "IT Services", "url": "services" },
       { "name": "Metal Fabrication & Engineering", "url": "works" },
-      { "name": "Career", "url": "career" },
+      { "name": "Apply for Query", "url": "career" },
       { "name": "Contact us", "url": "contact" }
     ],
     "ourWorks": [
@@ -274,5 +270,34 @@
       "title": "Lorem ipsum",
       "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
     }
-  ]
+  ],
+"WhyChooseUs": [
+  {
+    "icon": "fa-globe",
+    "text": "Global Presence",
+    "description": "Operating across multiple industries worldwide."
+  },
+  {
+    "icon": "fa-graduation-cap",
+    "text": "Expert Team",
+    "description": "Experienced professionals in diverse fields."
+  },
+  {
+    "icon": "fa-search",
+    "text": "Tailored Solutions",
+    "description": "Customized services for unique business needs."
+  },
+  {
+    "icon": "fa-line-chart",
+    "text": "Proven Success",
+    "description": "Track record of successful projects & satisfied clients."
+  },
+  {
+    "icon": "fa-trophy",
+    "text": "Quality & Compliance",
+    "description": "Meeting international standards & regulations."
+  }
+]
+
+  
 }
