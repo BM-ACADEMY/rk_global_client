@@ -7,6 +7,7 @@ html {
   font-weight: 400;
   width: 100% !important;
   height: 100% !important;
+
 }
 h2,
 h3,
@@ -283,31 +284,31 @@ header .intro-text {
   bottom: 0;
   left: 0;
 }
-#about .about-text li {
+/* #about .about-text li {
   margin-bottom: 6px;
   margin-left: 6px;
   list-style: none;
   padding: 0;
-}
-#about .about-text li:before {
+} */
+/* #about .about-text li:before {
   content: "\f00c";
   font-family: "FontAwesome";
   color: #5ca9fb;
   font-size: 11px;
   font-weight: 300;
   padding-right: 8px;
-}
+} */
 #about img {
-  width: 520px;
-  margin-top: 10px;
+  
+  /* margin-top: 10px; */
   background: #fff;
   border-right: 0;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.06);
 }
-#about p {
+/* #about p {
   line-height: 24px;
   margin: 30px 0;
-}
+} */
 /* Services Section */
 #services {
   padding: 100px 0;
@@ -315,7 +316,7 @@ header .intro-text {
   color: #fff;
 }
 #services .service-desc {
-  margin: 10px 10px 20px;
+  margin: 3px 30px 30px;
 }
 #services h2 {
   color: #fff;
@@ -333,7 +334,7 @@ header .intro-text {
 #services i.fa {
   font-size: 42px;
   width: 120px;
-  height: 120px;
+  height: 100px;
   padding: 40px 0;
   background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
   border-radius: 50%;
@@ -349,7 +350,7 @@ header .intro-text {
   color: rgba(255, 255, 255, 0.75);
 }
 #services .service-desc {
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
 }
 /* Portfolio Section */
 #portfolio {
@@ -405,6 +406,10 @@ header .intro-text {
   padding: 100px 0;
   background: #f6f6f6;
 }
+#metal{
+  padding: 100px 0;
+  background:white;
+}
 #testimonials i {
   color: #e6e6e6;
   font-size: 32px;
@@ -425,10 +430,10 @@ header .intro-text {
   height: 64px;
   border-radius: 50%;
 }
-.testimonial-content {
+/* .testimonial-content {
   position: relative;
   overflow: hidden;
-}
+} */
 .testimonial-content p {
   margin-bottom: 0;
   font-size: 14px;
@@ -460,7 +465,7 @@ header .intro-text {
 }
 /* Contact Section */
 #contact {
-  padding: 100px 0 60px;
+  /* padding: 100px 0 60px; */
   background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
   color: rgba(255, 255, 255, 0.75);
 }

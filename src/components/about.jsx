@@ -1,53 +1,88 @@
-
 import React from "react";
 
-export const About = (props) => {
+export const About = ({ data }) => {
   return (
-    <div id="about" >
+    <section id="about" className="py-5 bg-light">
       <div className="container">
-        {/* Row 1: Image and About Paragraph */}
-        <div className="row align-items-center mb-4">
-          <div className="col-md-6">
-            <img src="img/about.jpg" className="img-responsive" alt="About Us" />
+        {/* About Section */}
+        <div className="row align-items-center bg-white shadow-lg rounded p-4">
+          <div className="col-md-6 text-center">
+            <img
+              src="img/about.jpg"
+              alt="About Us"
+              className="img-fluid w-100 rounded shadow-sm about-img"
+              style={{ maxWidth: "100%", height: "auto", objectFit: "cover" }}
+            />
           </div>
           <div className="col-md-6">
-            <div className="about-text">
-              <h2>About Us</h2>
-              <p>{props.data ? props.data.Paragraph.join(" ") : "loading..."}</p>
+            <h2 className="fw-bold text-dark">About Us</h2>
+            <p
+              className="text-muted"
+              dangerouslySetInnerHTML={{
+                __html: data ? data.Paragraph.join(" ") : "Loading...",
+              }}
+              style={{ lineHeight: "3rem" }}
+            />
+          </div>
+        </div>
+
+        {/* Mission & Vision Section */}
+        <div className="row mt-4" style={{ marginTop: "10px" }}>
+          <div className="col-md-6">
+            <div
+              className=" text-white p-4 rounded shadow-sm"
+              style={{
+                background:
+                  "linear-gradient(to right, #6372ff 0%, #5ca9fb 100%)",
+                padding: "10px",
+              }}
+            >
+              <h2 className="fw-bold" style={{ color: "white" }}>
+                Our Mission
+              </h2>
+              <p className="fst-italic" style={{ color: "white" }}>
+                {data ? data.Mission.Text : "Loading..."}
+              </p>
+            </div>
+          </div>
+
+          <div className="col-md-6">
+            <div
+              className="bg-secondary text-white p-4 rounded shadow-sm"
+              style={{ backgroundColor: "#9ACD32", padding: "10px" }}
+            >
+              <h2 className="fw-bold" style={{ color: "white" }}>
+                Our Vision
+              </h2>
+              <p className="fst-italic" style={{ color: "white" }}>
+                {data ? data.Vision.Text : "Loading..."}
+              </p>
             </div>
           </div>
         </div>
 
-        {/* Row 2: Our Mission and Our Vision */}
+        {/* Core Values Section */}
         <div
-          className="row text-white py-5 mb-4"
-          style={{ background: "linear-gradient(to right, #6372ff 0%, #5ca9fb 100%)" ,marginTop:"5px"}}
+          className="mt-4 bg-white p-4 rounded shadow-lg"
+          style={{ marginTop: "10px" }}
         >
-          <div className="col-md-6 p-4" style={{padding:"8px"}}>
-            <h3 style={{color:"white",textAlign:"center"}}> Our Mission</h3>
-            <blockquote className="p-3" style={{color:"white"}}> {props.data ? props.data.Mission : "loading..."}</blockquote>
-          </div>
-          <div className="col-md-6 px-4" style={{padding:"8px"}}>
-            <h3 style={{color:"white",textAlign:"center"}}>Our Vision</h3>
-            <blockquote className="p-3 " style={{color:"white"}}> {props.data ? props.data.Vision : "loading..."}</blockquote>
-          </div>
-        </div>
-
-        {/* Row 3: Core Values */}
-        <div className="row py-5" style={{ backgroundColor: "#9ACD32", marginBottom: "1rem", marginTop: "5px" }}>
-          <div className="col-md-12  text-white">
-            <h3 className="text-center" style={{color:"white"}}>Core Values</h3>
-            <ul className="list-unstyled" style={{color:"white",padding:"5px"}}>
-              {props.data
-                ? props.data.CoreValues.map((value, index) => (
-                    <li key={index} className="py-1">✔ {value}</li>
-                  ))
-                : "loading..."}
-            </ul>
-          </div>
+          <h2 className="fw-bold text-dark">Core Values</h2>
+          <ul className="list-group list-group-flush">
+            {data ? (
+              data.CoreValues.map((value, index) => (
+                <li
+                  key={index}
+                  className="list-group-item d-flex align-items-center"
+                >
+                  <span className="text-primary me-2">✔</span> {value}
+                </li>
+              ))
+            ) : (
+              <p>Loading...</p>
+            )}
+          </ul>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
-

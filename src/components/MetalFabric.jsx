@@ -1,49 +1,34 @@
-import React, { useState ,useEffect} from "react";
+import React from "react";
+import { motion } from "framer-motion";
 import "../css/MetalFabric.css";
 
 export const MetalFabric = ({ data }) => {
-    const [selectedService, setSelectedService] = useState(null);
-  
-    useEffect(() => {
-      if (data?.length) {
-        setSelectedService(data[0]); // Set default selection when data arrives
-      }
-    }, [data]);
-  
-    if (!data?.length) {
-      return <p className="text-center">Loading services...</p>;
-    }
-  
-    return (
-      <div className="container my-5 " id="metal" >
-        <div className="row justify-content-center align-item-center">
-          <div className="col-lg-10">
-            <div className="metalfabric-container shadow">
-              {/* Left Sidebar */}
-              <div className="sidebar">
-                {data?.map((service) => (
-                  <div
-                    key={service.id}
-                    onClick={() => setSelectedService(service)}
-                    className={`service-item ${
-                      selectedService?.id === service?.id ? "active" : ""
-                    }`}
-                  >
-                    <i className={`${service?.icon} fa-lg me-3`}></i>
-                    <span className="text-white">{service?.title}</span>
+  return (
+    <div id="metal" className="metal-container container">
+      <div className="metal-wrapper container">
+        <div className="section-title"> 
+          <h2>Metal Fabrication & Engineering</h2>
+          <p>We provide high-quality metal fabrication and engineering solutions to meet industry standards.</p>
+        </div>
+        <div className="metal-grid">
+          {data
+            ? data.map((service, index) => (
+                <motion.div
+                  key={`${service.title}-${index}`}
+                  className="metal-card"
+                  whileHover={{ scale: 1.05, boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)" }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <img src={service.image} alt={service.title} className="metal-image" />
+                  <div className="metal-content">
+                    <h3>{service.title}</h3>  
+                    <p>{service.description}</p>
                   </div>
-                ))}
-              </div>
-  
-              {/* Right Content Section */}
-              <div className="content">
-                <h2 className="title">{selectedService?.title}</h2>
-                <p className="description">{selectedService?.description}</p>
-              </div>
-            </div>
-          </div>
+                </motion.div>
+              ))
+            : "Loading services..."}
         </div>
       </div>
-    );
-  };
-  
+    </div>
+  );
+};

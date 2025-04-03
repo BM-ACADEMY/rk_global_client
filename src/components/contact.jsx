@@ -212,85 +212,84 @@ export const Contact = ({ data = {} }) => {
     <div>
       <div id="contact" style={{ display: "flex", justifyContent: "center" }}>
         <div className="container" style={{ width: "100%" }}>
-        <div className="container py-md-4 py-lg-4">
-  <div className="row justify-content-center align-items-center g-5">
-    {/* First Column: Logo and Description */}
-    <div className="col-12 col-md-6 col-lg-3  text-md-start">
-      <img
-        src={logo}
-        alt="Company Logo"
-        className="img-fluid mb-2"
-        style={{ width: "250px", height: "200px" }}
-      />
-      <p dangerouslySetInnerHTML={{ __html: description || "loading..." }} />
-    </div>
+          <div className="container py-md-4 py-lg-4">
+            <div className="row justify-content-center align-items-center g-5">
+              {/* First Column: Logo and Description */}
+              <div className="col-8 col-md-3 col-lg-3  text-md-start">
+                <img
+                  src={logo}
+                  alt="Company Logo"
+                  className="img-fluid mb-2"
+                  style={{ width: "250px", height: "200px" }}
+                />
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: description || "loading...",
+                  }}
+                />
+              </div>
 
-    {/* Second Column: Useful Links */}
-    <div className="col-12 col-md-6 col-lg-3 ">
-      <h3>Useful Links</h3>
-      <ul className="list-unstyled">
-        {usefulLinks?.map((link, index) => (
-          <li key={index}>
-            <a
-              href={`#${link.url.replace(/\s+/g, "-").toLowerCase()}`}
-              className="text-decoration-none "
-              style={{color:"white"}}
-            >
-              {link.name}
-            </a>
-          </li>
-        )) || "Loading links..."}
-      </ul>
-    </div>
+              {/* Second Column: Useful Links */}
+              <div className="col-12 col-md-6 col-lg-3 ">
+                <h3>Useful Links</h3>
+                <ul className="list-unstyled">
+                  {usefulLinks?.map((link, index) => (
+                    <li key={index}>
+                      <a
+                        href={`#${link.url.replace(/\s+/g, "-").toLowerCase()}`}
+                        className="text-decoration-none "
+                        style={{ color: "white" }}
+                      >
+                        {link.name}
+                      </a>
+                    </li>
+                  )) || "Loading links..."}
+                </ul>
+              </div>
 
-    {/* Third Column: Our Works */}
-    <div className="col-12 col-md-6 col-lg-3 ">
-      <h3>Our Works</h3>
-      <ul className="list-unstyled">
-        {ourWorks?.map((work, index) => (
-          <li key={index}>
-            <a
-              href={`#${work.url.replace(/\s+/g, "-").toLowerCase()}`}
-              className="text-decoration-none "
-              style={{color:"white"}}
-            >
-              {work.name}
-            </a>
-          </li>
-        )) || "Loading works..."}
-      </ul>
-    </div>
+              {/* Third Column: Our Works */}
+              <div className="col-12 col-md-6 col-lg-3 ">
+                <h3>Our Works</h3>
+                <ul className="list-unstyled">
+                  {ourWorks?.map((work, index) => (
+                    <li key={index}>
+                      <a
+                        href={`#${work.url.replace(/\s+/g, "-").toLowerCase()}`}
+                        className="text-decoration-none "
+                        style={{ color: "white" }}
+                      >
+                        {work.name}
+                      </a>
+                    </li>
+                  )) || "Loading works..."}
+                </ul>
+              </div>
 
-    {/* Fourth Column: Address */}
-    <div className="col-12 col-md-6 col-lg-3 ">
-      <h3>Contact Info</h3>
-      <p>
-        <i className="fa fa-map-marker me-2"></i> 
-        <span>Address:</span> {address || "Loading address..."}
-      </p>
-      <p>
-        <i className="fa fa-phone me-2"></i> 
-        <span>Phone:</span> {phone || "Loading phone..."}
-      </p>
-      <p>
-        <i className="fa fa-envelope-o me-2"></i> 
-        <span>Email:</span> {email || "Loading email..."}
-      </p>
-    </div>
-  </div>
-</div>
-
+              {/* Fourth Column: Address */}
+              <div className="col-12 col-md-6 col-lg-3 ">
+                <h3>Contact Info</h3>
+                <p>
+                  <i className="fa fa-map-marker me-2"></i>
+                  <span>Address:</span> {address || "Loading address..."}
+                </p>
+                <p>
+                  <i className="fa fa-phone me-2"></i>
+                  <span>Phone:</span> {phone || "Loading phone..."}
+                </p>
+                <p>
+                  <i className="fa fa-envelope-o me-2"></i>
+                  <span>Email:</span> {email || "Loading email..."}
+                </p>
+              </div>
+            </div>
+          </div>
 
           {/* Bottom Social Icons */}
           <div className="col-md-12">
             <div className="row">
               <div className="social" style={{ textAlign: "center" }}>
                 <ul style={{ listStyle: "none", padding: "0" }}>
-                  {/* <li style={{ display: "inline", margin: "0 10px" }}>
-                <a href="https://youtube.com">
-                  <i className="fa fa-youtube" style={{ fontSize: "24px" }}></i>
-                </a>
-              </li> */}
+              
                   <li style={{ display: "inline", margin: "0 10px" }}>
                     <a href={instagram || "https://instagram.com"}>
                       <i
@@ -339,7 +338,7 @@ export const Contact = ({ data = {} }) => {
         id="footer"
         style={{
           backgroundColor: "#f1f1f1",
-          padding: "10px 0",
+          padding: "5px 0",
           textAlign: "center",
         }}
       >

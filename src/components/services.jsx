@@ -1,34 +1,100 @@
 import React from "react";
+import { motion } from "framer-motion";
 import "../css/Service.css";
 
-export const Services = (props) => {
+export const Services = ({ data }) => {
   return (
     <div id="services" className="services-container">
       <div className="services-wrapper">
         <div className="section-title">
-          <h2>Our Services</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed
-            dapibus leonec.
-          </p>
+          <h2>IT Services</h2>
+          <p>IT services provide technology solutions like cybersecurity, cloud computing, and software development to enhance business efficiency and security.</p>
         </div>
         <div className="services-grid">
-          {props.data
-            ? props.data.map((d, i) => (
-                <div key={`${d.name}-${i}`} className="service-card">
-                  <i className={d.icon}></i>
-                  <div className="service-desc">
+          {data
+            ? data.map((d, i) => (
+                <motion.div
+                  key={`${d.name}-${i}`}
+                  className="service-card"
+                  whileHover={{ scale: 1.05, boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)" }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <img src={d.image} alt={d.name} className="service-image" />
+                  <div className="service-content">
                     <h3>{d.name}</h3>
                     <p>{d.text}</p>
+                    {/* <a href="#" className="read-more">Read more →</a> */}
                   </div>
-                </div>
+                </motion.div>
               ))
-            : "loading..."}
+            : "Loading..."}
         </div>
       </div>
+      
+      <style>{`
+        .services-container {
+          // padding: 50px 0;
+          text-align: center;
+        }
+        
+        .services-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 20px;
+          margin-top: 30px;
+        }
+
+        .service-card {
+          background: #111827;
+          color: white;
+          border-radius: 12px;
+          overflow: hidden;
+          box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+          text-align: left;
+          transition: transform 0.3s ease;
+          cursor: pointer;
+        }
+
+        .service-image {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+        }
+
+        .service-content {
+          padding: 20px;
+        }
+
+        .service-content h3 {
+          font-size: 20px;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+
+        .service-content p {
+          font-size: 16px;
+          color: #e5e7eb;
+          margin-bottom: 10px;
+        }
+
+        .read-more {
+          display: inline-block;
+          padding: 8px 16px;
+          background-color: #2563eb;
+          color: white;
+          border-radius: 6px;
+          font-weight: bold;
+          text-decoration: none;
+        }
+
+        .read-more:hover {
+          background-color: #1e40af;
+        }
+      `}</style>
     </div>
   );
 };
+
 
 
 // import React from "react";

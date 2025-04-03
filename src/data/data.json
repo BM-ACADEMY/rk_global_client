@@ -24,24 +24,29 @@
     ]
   },
 
-    "About": {
+  "About": {
     "Paragraph": [
-    "RK Global Associates is a forward-thinking technology solutions provider, helping businesses navigate their digital transformation and achieve exceptional results.",
-    "We specialize in delivering innovative, customized solutions in Industrial & Commercial Solutions, Safety Equipment, Material Import & Export, Metal Fabrication & Engineering, and IT Consulting.",
-    "Adopting an agile, startup-like mindset, we focus on building strong and scalable strategies that enhance user engagement and drive business growth.",
-    "With a commitment to excellence, we take a thorough, strategic approach to each project, ensuring that we understand every critical aspect before delivering solutions that matter."
+      "RK Global Associates is a forward-thinking technology solutions provider, helping businesses navigate their digital transformation and achieve exceptional results.",
+      "We specialize in delivering innovative, customized solutions in Industrial & Commercial Solutions, Safety Equipment, Material Import & Export, Metal Fabrication & Engineering, and IT Consulting.",
+      "Adopting an agile, startup-like mindset, we focus on building strong and scalable strategies that enhance user engagement and drive business growth.",
+      "With a commitment to excellence, we take a thorough, strategic approach to each project, ensuring that we understand every critical aspect before delivering solutions that matter."
     ],
-    "Mission": "To be a trusted global partner delivering transformative IT solutions, workforce development programs, precision-driven industrial services, and efficient global trade operations, helping businesses optimize performance, efficiency, and market reach.",
-    "Vision": "To lead the way in technology, training, industrial innovation, and international trade, setting benchmarks in quality, sustainability, and client-centric excellence.",
-    "CoreValues": [
-    "Innovation & Excellence – Continuously pushing the boundaries to deliver high-performance solutions.",
-    "Client-Centric Approach – Customizing services to align with unique business needs and goals.",
-    "Integrity & Accountability – Conducting business with transparency, professionalism, and responsibility.",
-    "Global Perspective with Local Expertise – Bridging markets with deep industry insights and global best practices.",
-    "Sustainability & Ethical Growth – Driving business success while ensuring environmental and social responsibility."
-    ]
+    "Mission": {
+      "Text": "To be a trusted global partner delivering transformative IT solutions, workforce development programs, precision-driven industrial services, and efficient global trade operations, helping businesses optimize performance, efficiency, and market reach.",
+      "Image": "img/our-mission.jpg"
     },
-    
+    "Vision": {
+      "Text": "To lead the way in technology, training, industrial innovation, and international trade, setting benchmarks in quality, sustainability, and client-centric excellence.",
+      "Image": "img/our-vision.jpg"
+    },
+    "CoreValues": [
+      "Innovation & Excellence – Continuously pushing the boundaries to deliver high-performance solutions.",
+      "Client-Centric Approach – Customizing services to align with unique business needs and goals.",
+      "Integrity & Accountability – Conducting business with transparency, professionalism, and responsibility.",
+      "Global Perspective with Local Expertise – Bridging markets with deep industry insights and global best practices.",
+      "Sustainability & Ethical Growth – Driving business success while ensuring environmental and social responsibility."
+    ]
+  },
   "Gallery": [
     {
       "title": "Project Title",
@@ -91,27 +96,27 @@
   ],
   "Services": [
     {
-      "icon": "fa fa-cloud",
+      "image": "img/digital.jpg",
       "name": "Digital Transformation",
       "text": "We specialize in modernizing business operations through cloud migration (AWS, Azure, Google Cloud) and leverage AI-driven analytics and Robotic Process Automation (RPA) to optimize workflows, enhance efficiency, and reduce costs."
     },
     {
-      "icon": "fa fa-shield",
+      "image": "img/manged.jpg",
       "name": "Managed IT Services",
       "text": "Our managed IT services ensure your infrastructure is secure and operational 24/7, offering continuous monitoring, advanced cybersecurity, disaster recovery, and dedicated helpdesk support to minimize downtime."
     },
     {
-      "icon": "fa fa-code",
+      "image": "img/digital-engineering.jpg",
       "name": "Digital Engineering",
       "text": "We deliver custom software solutions and digital engineering services, including web and mobile applications. Our expertise covers automation, AI solutions, and seamless system integration for optimized business processes."
     },
     {
-      "icon": "fa fa-users",
+      "image": "img/staff.jpg",
       "name": "Staff Augmentation",
       "text": "Quickly fill skill gaps with our staff augmentation services, offering flexible hiring models (CtoH, CtoC, remote teams) and access to a global pool of skilled IT professionals."
     },
     {
-      "icon": "fa fa-users",
+      "image": "img/hire.jpg",
       "name": "Hire Developer",
       "text": "Access dedicated IT professionals in web/mobile development, Cloud, DevOps, and AI/data science, employing an Agile approach to ensure fast, iterative progress that integrates with your existing team."
     }
@@ -121,25 +126,25 @@
       "id": 1,
       "title": "Industrial & Commercial Division",
       "description": "RK Global Associates enhances operational efficiency with expert system integration and machinery solutions, helping businesses streamline processes, reduce costs, and boost performance.",
-      "icon": "fa fa-building"
+      "image": "img/industrial.jpg"
     },
     {
       "id": 2,
       "title": "Safety Equipment",
       "description": "We provide high-quality safety gear, including helmets, harnesses, and protective equipment, ensuring workplace safety, risk reduction, and regulatory compliance.",
-      "icon": "fa fa-shield"
+      "image": "img/safety-equipment.jpg"
     },
     {
       "id": 3,
       "title": "Material Import & Export",
       "description": "We specialize in global material sourcing, managing logistics, compliance, and timely deliveries to support seamless international trade and expand your market reach.",
-      "icon": "fa fa-ship"
+      "image": "img/export.jpg"
     },
     {
       "id": 4,
       "title": "Metal Fabrication & Engineering",
       "description": "Our custom metal fabrication solutions ensure precision, durability, and quality, catering to diverse industrial applications, from design to final installation.",
-      "icon": "fa fa-cogs"
+      "image": "img/metal-fabrication.jpg"
     }
   ],
   "Testimonials": [
@@ -147,31 +152,36 @@
       "img": "img/testimonials/01.jpg",
       "title": "Excellent Service & Quality Products",
       "text": "RK Global Associates has been a reliable partner for our industrial and commercial needs. Their high-quality safety equipment and commitment to safety standards have made our workplace much more secure. Highly recommended!",
-      "name": "Ethan"
+      "name": "Ethan",
+      "rating": 5
     },
     {
       "img": "img/testimonials/02.jpg",
       "title": "Professional & Efficient Material Import & Export",
       "text": "We have been sourcing industrial materials through RK Global Associates for over a year, and their import-export services are seamless. Timely delivery and exceptional customer service make them stand out in the industry.",
-      "name": "Noah"
+      "name": "Noah",
+      "rating": 4
     },
     {
       "img": "img/testimonials/03.jpg",
       "title": "Reliable Metal Fabrication & Engineering Solutions",
       "text": "The metal fabrication services provided by RK Global Associates are top-notch. Their precision and attention to detail helped us complete our construction project on time. Great expertise in engineering!",
-      "name": "Lucas"
+      "name": "Lucas",
+      "rating": 4
     },
     {
       "img": "img/testimonials/04.jpg",
       "title": "High-Quality Industrial & Commercial Products",
       "text": "RK Global Associates has been our go-to supplier for industrial and commercial materials. Their wide range of products, combined with competitive pricing, makes them a trusted partner for our business.",
-      "name": "Olivia"
+      "name": "Olivia",
+      "rating": 5
     },
     {
       "img": "img/testimonials/05.jpg",
       "title": "Best in Safety Equipment & Compliance",
       "text": "When it comes to safety equipment, RK Global Associates never disappoints. Their products meet all safety regulations, and their team ensures we get the right solutions for our industry needs. Excellent service!",
-      "name": "Aiden"
+      "name": "Aiden",
+      "rating": 5
     }
   ],
   "Team": [
@@ -196,7 +206,6 @@
       "job": "Project Manager"
     }
   ],
-
   "Contact": {
     "logo": "img/logo.png",
     "address": "Erode TN",
@@ -244,7 +253,6 @@
       }
     ]
   },
-
   "Features": [
     {
       "icon": "fa fa-comments-o",
