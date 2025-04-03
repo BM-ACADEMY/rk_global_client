@@ -1,14 +1,20 @@
-body,
-html {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
   font-family: "Open Sans", sans-serif;
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
   color: #777;
   font-weight: 400;
   width: 100% !important;
-  height: 100% !important;
-
+  min-height: 100vh; /* Ensures full viewport height */
+  overflow-x: hidden; /* Prevents horizontal scrolling */
 }
+
 h2,
 h3,
 h4 {
