@@ -238,7 +238,7 @@ export const Contact = ({ data = {} }) => {
                   {ourWorks.length > 0 ? (
                     ourWorks.map((work, index) => (
                       <li key={index}>
-                        <a href={work.url} className="contact-link">
+                        <a href="#metal" className="contact-link">
                           {work.name}
                         </a>
                       </li>
