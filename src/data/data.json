@@ -12,7 +12,7 @@
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
       },
       {
-        "image": "img/import.jpg",
+        "image": "img/import-and-export.jpg",
         "text": "Explore Our Services",
         "description": "We provide world-class IT solutions for your business."
       },
@@ -219,7 +219,7 @@
       { "name": "About", "url": "about" },
       { "name": "IT Services", "url": "services" },
       { "name": "Metal Fabrication & Engineering", "url": "works" },
-      { "name": "Apply for Query", "url": "career" },
+      { "name": "Apply ", "url": "career" },
       { "name": "Contact us", "url": "contact" }
     ],
     "ourWorks": [
@@ -300,4 +300,4 @@
 ]
 
   
-}
+} 

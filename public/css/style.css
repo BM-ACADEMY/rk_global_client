@@ -590,6 +590,16 @@ label {
   display: inline-block;
   margin: 0 20px;
 }
+.social i.fa {
+  /* font-size: 22px; */
+  width: 48px;
+  height: 48px;
+  padding: 12px 0;
+  /* border: 2px solid #608dfd; */
+  color: #608dfd;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
 #contact .social i.fa {
   font-size: 22px;
   width: 48px;

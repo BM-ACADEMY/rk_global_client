@@ -41,13 +41,13 @@ export const WhyChooseUs = ({ data }) => {
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 1, delay: 0.2 }}
       >
-       Why Choose Us? 
+        Why Choose Us?
       </motion.h1>
 
       <Container>
-        <Row className="justify-content-center pb-5">
+        <Row className="features-grid">
           {data?.map((feature, index) => (
-            <Col key={index} lg={3} md={4} sm={6} xs={12} className="mb-4">
+            <Col key={index} className="feature-col">
               <motion.div
                 className={`feature-card ${index % 2 === 0 ? "even" : "odd"} ${
                   index === activeIndex || index === hoveredIndex ? "hovered" : ""
@@ -59,9 +59,9 @@ export const WhyChooseUs = ({ data }) => {
                 onMouseLeave={() => setHoveredIndex(null)}
               >
                 <Card.Body>
-                  {/* Fix: Using FontAwesome Icons */}
-                  <div className="icon-container">
-                    <i className={`fa ${feature.icon} icon`}></i>
+                  {/* FontAwesome Icons */}
+                  <div className="icon-container social">
+                    <i className={`fa ${feature.icon} icon`} style={{fontSize:"40px"}}></i>
                   </div>
                   <Card.Title className="mt-2 feature-title">{feature.text}</Card.Title>
                   <p className="feature-text">{feature.description}</p>

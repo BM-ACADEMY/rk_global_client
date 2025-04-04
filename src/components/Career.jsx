@@ -1,7 +1,16 @@
-import { useState } from "react";
-import { DialogTitle, DialogContent, DialogActions, Button, TextField, Box, Typography } from "@mui/material";
+import { useState, useEffect } from "react";
+import {
+  DialogTitle,
+  DialogContent,
+  DialogActions,
+  Button,
+  TextField,
+  Box,
+  Typography,
+} from "@mui/material";
 import { CloudUpload, Delete } from "@mui/icons-material";
 import axios from "axios";
+import Swal from 'sweetalert2';
 
 const JobApplicationForm = ({ handleClose }) => {
   const [formData, setFormData] = useState({
@@ -16,6 +25,9 @@ const JobApplicationForm = ({ handleClose }) => {
 
   const [errors, setErrors] = useState({});
   const [filePreview, setFilePreview] = useState(null);
+  const baseUrl = process.env.REACT_APP_BASE_URL;
+  const [alert, setAlert] = useState({ show: false, type: "", message: "" });
+  const [loading, setLoading] = useState(false);
 
   // Validation rules
   const validateForm = () => {
@@ -29,7 +41,9 @@ const JobApplicationForm = ({ handleClose }) => {
 
     if (!formData.email.trim()) {
       newErrors.email = "Email is required";
-    } else if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[A-Za-z]{2,}$/.test(formData.email)) {
+    } else if (
+      !/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[A-Za-z]{2,}$/.test(formData.email)
+    ) {
       newErrors.email = "Invalid email format";
     }
 
@@ -85,10 +99,19 @@ const JobApplicationForm = ({ handleClose }) => {
   // Prevent default behavior for drag events
   const handleDragOver = (e) => e.preventDefault();
 
-  // Handle API Call
   const handleSubmit = async () => {
     if (!validateForm()) return;
-
+   
+  
+    if (!formData.file) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Please upload a resume file.',
+      });
+      return;
+    }
+  
     const form = new FormData();
     form.append("name", formData.name);
     form.append("email", formData.email);
@@ -97,23 +120,103 @@ const JobApplicationForm = ({ handleClose }) => {
     form.append("subject", formData.subject);
     form.append("message", formData.message);
     form.append("resume", formData.file);
-
+  
     try {
-      const response = await axios.post("https://your-api-endpoint.com/upload", form, {
-        headers: { "Content-Type": "multipart/form-data" },
+      setLoading(true);
+      const response = await axios.post(
+        `${baseUrl}/upload-career/upload`,
+        form,
+        {
+          headers: { "Content-Type": "multipart/form-data" },
+        }
+      );
+  
+   
+      setLoading(false);
+      Swal.fire({
+        icon: 'success',
+        title: 'Success!',
+        text: 'Application submitted successfully!',
+        timer: 3000, // Auto-close after 3 seconds
+        showConfirmButton: false, // Hide the "OK" button
       });
-
-      console.log("Success:", response.data);
-      alert("Application submitted successfully!");
       handleClose();
     } catch (error) {
       console.error("Error:", error);
-      alert("Submission failed. Please try again.");
+      setLoading(false);
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'Submission failed. Please try again.',
+        timer: 3000, // Auto-close after 3 seconds
+        showConfirmButton: false, // Hide the "OK" button
+      });
     }
+  };
+
+  const handleAlertClose = () => {
+    setAlert({ show: false, type: '', message: '' });
   };
 
   return (
     <>
+     {alert.show && (
+        <div
+          style={{
+            position: "fixed",
+            top: "2s0px",
+            right: "20px",
+            zIndex: 1000,
+            minWidth: "300px",
+            padding: "15px 20px",
+            backgroundColor: alert.type === "success" ? "#e6ffe6" : "#ffe6e6",
+            border: `1px solid ${alert.type === "success" ? "#00cc00" : "#ff3333"}`,
+            borderRadius: "5px",
+            boxShadow: "0 2px 5px rgba(0,0,0,0.2)",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            animation: "slideIn 0.3s ease-out",
+          }}
+        >
+          <span
+            style={{
+              color: alert.type === "success" ? "#006600" : "#cc0000",
+              fontWeight: "500",
+            }}
+          >
+            {alert.message}
+          </span>
+          <button
+            onClick={handleAlertClose}
+            style={{
+              background: "none",
+              border: "none",
+              cursor: "pointer",
+              color: alert.type === "success" ? "#006600" : "#cc0000",
+              fontSize: "16px",
+              padding: "0 5px",
+              lineHeight: "1",
+            }}
+          >
+            ×
+          </button>
+        </div>
+      )}
+      <style>
+        {`
+          @keyframes slideIn {
+            from {
+              transform: translateX(100%);
+              opacity: 0;
+            }
+            to {
+              transform: translateX(0);
+              opacity: 1;
+            }
+          }
+        `}
+      </style>
       <DialogTitle style={{ color: "#007bff", fontWeight: "bold" }}>
         <h3>Job Application</h3>
       </DialogTitle>
@@ -196,7 +299,13 @@ const JobApplicationForm = ({ handleClose }) => {
           onDragOver={handleDragOver}
         >
           {filePreview ? (
-            <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
               <p>{formData.file.name}</p>
               <Button
                 variant="contained"
@@ -218,7 +327,7 @@ const JobApplicationForm = ({ handleClose }) => {
           )}
           <input
             type="file"
-            accept=".pdf,.doc,.docx"
+            accept="*"
             style={{
               position: "absolute",
               width: "100%",
@@ -241,9 +350,16 @@ const JobApplicationForm = ({ handleClose }) => {
           variant="contained"
           color="primary"
           onClick={handleSubmit}
-          disabled={!formData.name || !formData.email || !formData.phone || !formData.position || !formData.message || !formData.file}
+          disabled={
+            !formData.name ||
+            !formData.email ||
+            !formData.phone ||
+            !formData.position ||
+            !formData.message ||
+            !formData.file
+          }
         >
-          Apply
+          {loading ? "Submitting..." : "Apply"}
         </Button>
       </DialogActions>
     </>

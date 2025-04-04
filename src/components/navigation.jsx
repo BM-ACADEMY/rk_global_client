@@ -75,7 +75,6 @@
 //   );
 // };
 
-
 import { useState, useEffect } from "react";
 import "../css/Navigation.css";
 import JobApplicationForm from "../components/Career"; 
@@ -85,7 +84,7 @@ export const Navigation = (props) => {
   const { logo } = props.data;
   const [openDropdown, setOpenDropdown] = useState(null);
   const [openModal, setOpenModal] = useState(false);
-  const [activeSection, setActiveSection] = useState(""); // Track active section
+  const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -93,8 +92,10 @@ export const Navigation = (props) => {
       let currentSection = "";
 
       sections.forEach((section) => {
-        const sectionTop = section.offsetTop - 80; // Adjust for navbar height
-        if (window.scrollY >= sectionTop) {
+        const sectionTop = section.offsetTop - 100;
+        const sectionBottom = sectionTop + section.offsetHeight;
+
+        if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
           currentSection = section.getAttribute("id");
         }
       });
@@ -106,15 +107,10 @@ export const Navigation = (props) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const toggleDropdown = (menu) => {
-    setOpenDropdown(openDropdown === menu ? null : menu);
-  };
-
   return (
     <>
       <nav id="menu" className="navbar navbar-default navbar-fixed-top">
         <div className="container">
-          {/* Navbar Header */}
           <div className="navbar-header">
             <button
               type="button"
@@ -138,7 +134,6 @@ export const Navigation = (props) => {
             </a>
           </div>
 
-          {/* Collapsible Menu */}
           <div className="collapse navbar-collapse" id="navbar-menu">
             <ul className="nav navbar-nav navbar-right">
               <li className={activeSection === "header" ? "active" : ""}>
@@ -148,13 +143,13 @@ export const Navigation = (props) => {
                 <a href="#about" className="page-scroll">ABOUT US</a>
               </li>
 
-              {/* IT Service with Dropdown */}
-              <li className={`dropdown ${openDropdown === "it-service" ? "open" : ""}`}>
-                <a 
-                  href="#" 
-                  className="dropdown-toggle"
-                  onClick={() => toggleDropdown("it-service")}
-                >
+              {/* IT Service Dropdown - Open on Hover */}
+              <li 
+                className={`dropdown ${openDropdown === "it-service" ? "open" : ""}`}
+                onMouseEnter={() => setOpenDropdown("it-service")}
+                onMouseLeave={() => setOpenDropdown(null)}
+              >
+                <a href="#" className="dropdown-toggle">
                   IT SERVICE <b className="caret"></b>
                 </a>
                 <ul className="dropdown-menu">
@@ -165,13 +160,13 @@ export const Navigation = (props) => {
                 </ul>
               </li>
 
-              {/* Metal Fabrication Dropdown */}
-              <li className={`dropdown ${openDropdown === "metal-fabrication" ? "open" : ""}`}>
-                <a 
-                  href="#" 
-                  className="dropdown-toggle"
-                  onClick={() => toggleDropdown("metal-fabrication")}
-                >
+              {/* Metal Fabrication Dropdown - Open on Hover */}
+              <li 
+                className={`dropdown ${openDropdown === "metal-fabrication" ? "open" : ""}`}
+                onMouseEnter={() => setOpenDropdown("metal-fabrication")}
+                onMouseLeave={() => setOpenDropdown(null)}
+              >
+                <a href="#" className="dropdown-toggle">
                   METAL FABRICATION & ENGINEERING <b className="caret"></b>
                 </a>
                 <ul className="dropdown-menu">
@@ -185,7 +180,7 @@ export const Navigation = (props) => {
               {/* Career link triggers modal */}
               <li>
                 <a href="#" onClick={() => setOpenModal(true)}>
-                  APPLY QUERY
+                  APPLY 
                 </a>
               </li>
               
@@ -204,4 +199,6 @@ export const Navigation = (props) => {
     </>
   );
 };
+
+
 

@@ -54,10 +54,7 @@
       width: 100%;
     }
   } */
-
-
-  /* Section Styling */
-.features-section {
+  .features-section {
     padding: 60px 0px;
     background: #f3f4f6;
   }
@@ -75,7 +72,23 @@
     text-align: center;
   }
   
-  /* Card Styling */
+  /* Features Grid (5 cards in a row) */
+  .features-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  /* Card Container */
+  .feature-col {
+    flex: 1 1 calc(20% - 20px); /* Ensures exactly 5 per row */
+    max-width: calc(20% - 20px);
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Card Layout */
   .feature-card {
     text-align: center;
     padding: 20px;
@@ -85,60 +98,44 @@
     transition: background-color 0.5s ease-in-out, transform 0.3s ease-in-out;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     background-color: #fff;
-    height: 200px;
+    height: 220px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    margin-top: 10px;
+    width: 100%;
+    max-width: 250px;
+    margin: auto;
+
   }
   
-  /* Underline Effect */
-  .feature-card::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    width: 0;
-    height: 3px;
-    background-color: #0111b5;
-    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
-    transform: translateX(-50%);
-  }
-  
-  /* Hover Effect */
+  /* Hover Effects */
   .feature-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    /* box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); */
+    border-color: #007bff ;
   }
   
-  /* Hover Effect for Odd Cards */
   .feature-card.odd:hover {
-    background-color: #d3f67a31; /* Light Green */
+    background-color: #d3f67a31;
   }
   
-  /* Hover Effect for Even Cards */
   .feature-card.even:hover {
-    background-color: #b8d5f367; /* Light Blue */
-  }
-  
-  .feature-card:hover::after {
-    width: 100%;
+    background-color: #b8d5f367;
   }
   
   /* Icon Container */
   .icon-container {
     display: flex;
     justify-content: center;
-    /* align-items: center; */
     height: 60px;
   }
   
   /* Icon Styling */
   .icon {
-    width: 100px !important;
-    height: 100px !important;
+    width: 60px !important;
+    height: 60px !important;
     transition: transform 0.4s ease-in-out;
   }
   
@@ -146,8 +143,8 @@
   .feature-card:hover .icon {
     transform: scale(1.2) rotate(8deg);
   }
-  
-  /* Hide the title and text initially */
+    
+  /* Hide text initially */
   .feature-text {
     opacity: 0;
     height: 0;
@@ -155,7 +152,7 @@
     transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out;
   }
   
-  /* Show the title and text only when hovering */
+  /* Show text when hovering */
   .feature-card:hover .feature-text {
     opacity: 1;
     height: auto;
@@ -164,30 +161,32 @@
   /* Feature Title */
   .feature-title {
     font-weight: 400;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-family: var(--font3);
+    font-weight: 700;
     color: #333;
     margin-top: 10px;
   }
   
-  /* Feature Text */
-  .feature-text {
-    font-size: 0.95rem;
-    color: #666;
-    font-family: var(--font3);
-    margin-top: 8px;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 991px) {
-    .main-about-title {
-      font-size: 2.5rem;
+  /* Responsive Grid */
+  @media (max-width: 1200px) {
+    .feature-col {
+      flex: 1 1 calc(25% - 20px); /* 4 per row */
+      max-width: calc(25% - 20px);
     }
   }
   
-  @media (max-width: 767px) {
-    .main-about-title {
-      font-size: 2rem;
+  @media (max-width: 992px) {
+    .feature-col {
+      flex: 1 1 calc(33.33% - 20px); /* 3 per row */
+      max-width: calc(33.33% - 20px);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .feature-col {
+      flex: 1 1 calc(50% - 20px); /* 2 per row */
+      max-width: calc(50% - 20px);
     }
   
     .feature-card {
@@ -195,3 +194,11 @@
       padding: 15px;
     }
   }
+  
+  @media (max-width: 576px) {
+    .feature-col {
+      flex: 1 1 100%; /* 1 per row */
+      max-width: 100%;
+    }
+  }
+  
