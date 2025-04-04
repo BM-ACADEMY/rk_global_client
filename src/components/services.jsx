@@ -4,37 +4,52 @@ import "../css/Service.css";
 
 export const Services = ({ data }) => {
   return (
-    <div id="services" className="services-container">
-      <div className="services-wrapper">
-        <div className="section-title">
-          <h2>IT Services</h2>
-          <p>
-            IT services provide technology solutions like cybersecurity, cloud computing, and software development to enhance business efficiency and security.
-          </p>
-        </div>
-        <div className="services-grid">
-          {data
-            ? data.map((d, i) => (
-                <motion.div
-                  key={`${d.name}-${i}`}
-                  className="service-card"
-                  whileHover={{
-                    scale: 1.05,
-                    boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)",
-                  }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <img src={d.image} alt={d.name} className="service-image" />
-                  <div className="service-content">
-                    <h3>{d.name}</h3>
-                    <p>{d.text}</p>
-                  </div>
-                </motion.div>
-              ))
-            : "Loading..."}
-        </div>
+    <div id="services" className="services-container" data-aos="fade-up">
+    <div className="services-wrapper">
+      <div className="section-title" data-aos="zoom-in">
+        <h2>IT Services</h2>
+        <p>
+          IT services provide technology solutions like cybersecurity, cloud computing, and software development to enhance business efficiency and security.
+        </p>
+      </div>
+
+      <div className="services-grid">
+        {data
+          ? data.map((d, i) => (
+              <motion.div
+                key={`${d.name}-${i}`}
+                className="service-card"
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)",
+                }}
+                transition={{ duration: 0.3 }}
+                data-aos={
+                  i % 3 === 0
+                    ? "fade-right"
+                    : i % 3 === 1
+                    ? "fade-up"
+                    : "fade-left"
+                }
+                data-aos-delay={100 * i}
+              >
+                <img
+                  src={d.image}
+                  alt={d.name}
+                  className="service-image"
+                  data-aos="flip-up"
+                  data-aos-delay={200 * i}
+                />
+                <div className="service-content">
+                  <h3>{d.name}</h3>
+                  <p>{d.text}</p>
+                </div>
+              </motion.div>
+            ))
+          : "Loading..."}
       </div>
     </div>
+  </div>
   );
 };
 

@@ -17,4 +17,7 @@
     width: 100%;
   }
 } */
+[data-aos] {
+  transition: all 1s ease-in-out !important;
+}
 

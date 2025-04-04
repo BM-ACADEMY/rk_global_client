@@ -1,0 +1,197 @@
+.core-values-container {
+    display: flex;
+    /* align-items: center; */
+    padding: 40px;
+    background: #f9f9f9;
+    flex-wrap: wrap;
+    /* text-align: center; */
+  }
+  
+  /* Image Styling */
+  .core-values-image {
+    flex: 0 0 250px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .image-wrapper {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Core Values List */
+  .core-values-list {
+    flex: 1;
+    padding-left: 40px;
+  }
+  
+  .core-value-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .bullet-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    margin-right: 16px;
+  }
+  
+  .core-value-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* RESPONSIVE DESIGN */
+  @media (max-width: 768px) {
+    .core-values-container {
+      flex-direction: column;
+      align-items: center;
+      padding-top: 40px;
+      padding: 0;
+      /* text-align: center; */
+    }
+  
+    .core-values-image {
+      flex: 0 0 auto;
+    }
+  
+    .core-values-list {
+      padding-left: 0;
+    }
+  
+    .core-value-item {
+      justify-content: center;
+    }
+    .bullet-circle {
+        padding: 10px;
+    }
+    .image-wrapper{
+        margin-top: 20px;
+    }
+  }
+  
+
+
+  .mission-vision-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 40px;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  
+  /* Mission & Vision Cards */
+  .mission-card, .vision-card {
+    width: 280px;
+    height: 280px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* text-align: center; */
+    padding: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  /* Mission Card */
+  .mission-card {
+    border: 4px solid #5ca9fb;
+    transform: rotate(-5deg);
+  }
+  
+  /* Vision Card */
+  .vision-card {
+    border: 4px solid #9ACD32;
+    transform: rotate(5deg);
+  }
+  
+  /* Card Content */
+  .card-content h2 {
+    color: #333;
+    font-size: 22px;
+    font-weight: bold;
+  }
+  
+  .card-content p {
+    font-size: 12px;
+    color: #555;
+    max-width: 200px;
+    margin-top: 10px;
+  }
+  
+  /* Icons */
+  .icon {
+    font-size: 40px;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  /* Connector Line */
+  .connector {
+    width: 60px;
+    height: 10px;
+    background: linear-gradient(to right, #5ca9fb, #9ACD32);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Center Circle */
+  .connector .circle {
+    width: 15px;
+    height: 15px;
+    background: white;
+    border: 3px solid #5ca9fb;
+    border-radius: 50%;
+    position: absolute;
+  }
+  
+  /* Responsive Mobile Layout */
+  @media (max-width: 768px) {
+    .mission-vision-container {
+      flex-direction: column;
+      padding: 0;
+    }
+  
+    .mission-card, .vision-card {
+      width: 100%;
+      max-width: 320px;
+      height: auto;
+      padding: 30px;
+      transform: none;
+    }
+  
+    .connector {
+      width: 10px;
+      height: 40px;
+      background: linear-gradient(to bottom, #5ca9fb, #9ACD32);
+    }
+    /* .card-content p{
+        max-width: 0px;
+    } */
+  }
+  

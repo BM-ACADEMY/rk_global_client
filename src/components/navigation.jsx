@@ -85,27 +85,48 @@ export const Navigation = (props) => {
   const [openDropdown, setOpenDropdown] = useState(null);
   const [openModal, setOpenModal] = useState(false);
   const [activeSection, setActiveSection] = useState("");
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 992);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 992);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
       const sections = document.querySelectorAll("section[id]");
       let currentSection = "";
-
+  
       sections.forEach((section) => {
-        const sectionTop = section.offsetTop - 100;
+        const rect = section.getBoundingClientRect();
+        const sectionTop = rect.top + window.scrollY;
         const sectionBottom = sectionTop + section.offsetHeight;
-
-        if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
+        const scrollPosition = window.scrollY + window.innerHeight / 2; // Adjust midpoint for better detection
+  
+        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
           currentSection = section.getAttribute("id");
         }
       });
-
+  
       setActiveSection(currentSection);
     };
-
+  
     window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Run on mount to set the initial active section
+  
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+  
+
+  // Handle dropdown toggle based on device type
+  const handleDropdown = (menu) => {
+    if (isMobile) {
+      setOpenDropdown(openDropdown === menu ? null : menu);
+    }
+  };
 
   return (
     <>
@@ -143,13 +164,13 @@ export const Navigation = (props) => {
                 <a href="#about" className="page-scroll">ABOUT US</a>
               </li>
 
-              {/* IT Service Dropdown - Open on Hover */}
+              {/* IT Service Dropdown */}
               <li 
                 className={`dropdown ${openDropdown === "it-service" ? "open" : ""}`}
-                onMouseEnter={() => setOpenDropdown("it-service")}
-                onMouseLeave={() => setOpenDropdown(null)}
+                onMouseEnter={() => !isMobile && setOpenDropdown("it-service")}
+                onMouseLeave={() => !isMobile && setOpenDropdown(null)}
               >
-                <a href="#" className="dropdown-toggle">
+                <a href="#" className="dropdown-toggle" onClick={() => handleDropdown("it-service")}>
                   IT SERVICE <b className="caret"></b>
                 </a>
                 <ul className="dropdown-menu">
@@ -160,13 +181,13 @@ export const Navigation = (props) => {
                 </ul>
               </li>
 
-              {/* Metal Fabrication Dropdown - Open on Hover */}
+              {/* Metal Fabrication Dropdown */}
               <li 
                 className={`dropdown ${openDropdown === "metal-fabrication" ? "open" : ""}`}
-                onMouseEnter={() => setOpenDropdown("metal-fabrication")}
-                onMouseLeave={() => setOpenDropdown(null)}
+                onMouseEnter={() => !isMobile && setOpenDropdown("metal-fabrication")}
+                onMouseLeave={() => !isMobile && setOpenDropdown(null)}
               >
-                <a href="#" className="dropdown-toggle">
+                <a href="#" className="dropdown-toggle" onClick={() => handleDropdown("metal-fabrication")}>
                   METAL FABRICATION & ENGINEERING <b className="caret"></b>
                 </a>
                 <ul className="dropdown-menu">
@@ -199,6 +220,7 @@ export const Navigation = (props) => {
     </>
   );
 };
+
 
 
 

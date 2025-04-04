@@ -171,182 +171,141 @@ import React, { useState, useEffect } from "react";
 import "../css/Contact.css";
 
 export const Contact = ({ data = {} }) => {
-  // Provide an empty object as default
   const {
     logo,
     address,
     phone,
     email,
     mobile,
-    facebook,
-    twitter,
-    youtube,
     instagram,
     linkedin,
     description,
-    usefulLinks,
-    ourWorks,
-  } = data; // Now it won't throw an error
+    usefulLinks = [],
+    ourWorks = [],
+  } = data;
+
   const [isVisible, setIsVisible] = useState(false);
-  const [whatsappNumber, setWhatsappNumber] = useState("+91 1234567890");
-  // Function to handle scroll visibility
+
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.scrollY > 200) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
+      setIsVisible(window.scrollY > 200);
     };
 
     window.addEventListener("scroll", toggleVisibility);
     return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
 
-  // Scroll to top function
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
     <div>
-      <div id="contact" style={{ display: "flex",  }}>
-        <div className="" style={{ width: "100%" }}>
-          <div className="container py-md-4 py-lg-4">
-            <div className="row justify-content-center align-items-center g-5">
+      <div id="contact" className="contact-container">
+        <div className="container">
+          <div className="py-md-4 py-lg-4">
+            <div className="contact-content">
               {/* First Column: Logo and Description */}
-              <div className="col-8 col-md-3 col-lg-3  text-md-start">
-                <img
-                  src={logo}
-                  alt="Company Logo"
-                  className="img-fluid mb-2"
-                  style={{ width: "250px", height: "200px" }}
-                />
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: description || "loading...",
-                  }}
-                />
+              <div className="contact-column">
+               <div style={{backgroundColor:"white",padding:"2px",marginBottom:"5px" ,borderRadius:"4px"}}>
+               <img src={logo} alt="Company Logo" className="logo-img" />
+               </div>
+                <p dangerouslySetInnerHTML={{ __html: description || "Loading..." }} />
               </div>
 
               {/* Second Column: Useful Links */}
-              <div className="col-12 col-md-6 col-lg-3 ">
+              <div className="contact-column">
                 <h3>Useful Links</h3>
-                <ul className="list-unstyled">
-                  {usefulLinks?.map((link, index) => (
-                    <li key={index}>
-                      <a
-                        href={`#${link.url.replace(/\s+/g, "-").toLowerCase()}`}
-                        className="text-decoration-none "
-                        style={{ color: "white" }}
-                      >
-                        {link.name}
-                      </a>
-                    </li>
-                  )) || "Loading links..."}
+                <ul>
+                  {usefulLinks.length > 0 ? (
+                    usefulLinks.map((link, index) => (
+                      <li key={index}>
+                        <a href={link.url} className="contact-link">
+                          {link.name}
+                        </a>
+                      </li>
+                    ))
+                  ) : (
+                    <li>Loading links...</li>
+                  )}
                 </ul>
               </div>
 
               {/* Third Column: Our Works */}
-              <div className="col-12 col-md-6 col-lg-3 ">
+              <div className="contact-column">
                 <h3>Our Works</h3>
-                <ul className="list-unstyled">
-                  {ourWorks?.map((work, index) => (
-                    <li key={index}>
-                      <a
-                        href={`#${work.url.replace(/\s+/g, "-").toLowerCase()}`}
-                        className="text-decoration-none "
-                        style={{ color: "white" }}
-                      >
-                        {work.name}
-                      </a>
-                    </li>
-                  )) || "Loading works..."}
+                <ul>
+                  {ourWorks.length > 0 ? (
+                    ourWorks.map((work, index) => (
+                      <li key={index}>
+                        <a href={work.url} className="contact-link">
+                          {work.name}
+                        </a>
+                      </li>
+                    ))
+                  ) : (
+                    <li>Loading works...</li>
+                  )}
                 </ul>
               </div>
 
-              {/* Fourth Column: Address */}
-              <div className="col-12 col-md-6 col-lg-3 ">
+              {/* Fourth Column: Contact Info */}
+              <div className="contact-column">
                 <h3>Contact Info</h3>
-                <p style={{display:"flex",gap:"3px",alignItems:"center"}}>
-                  <i className="fa fa-map-marker me-2"></i>
-                  <span>Address:</span> {address || "Loading address..."}
-                </p>
-                <p style={{display:"flex",gap:"3px",alignItems:"center"}}>
-                  <i className="fa fa-phone me-2"></i>
-                  <span>Phone:</span> {phone || "Loading phone..."}
-                </p>
-                <p style={{display:"flex",gap:"3px",alignItems:"center"}}>
-                  <i className="fa fa-envelope-o me-2"></i>
-                  <span>Email:</span> {email || "Loading email..."}
-                </p>
-                <div className="row">
-                  <div className="social">
-                    <ul style={{ listStyle: "none", padding: "0" }}>
-                      <li style={{ display: "inline", margin: "0 10px" }}>
-                        <a href={instagram || "https://instagram.com"}>
-                          <i
-                            className="fa fa-instagram"
-                            style={{ fontSize: "24px" }}
-                          ></i>
-                        </a>
-                      </li>
-                      <li style={{ display: "inline", margin: "0 10px" }}>
-                        <a href={linkedin || "https://linkedin.com"}>
-                          <i
-                            className="fa fa-linkedin"
-                            style={{ fontSize: "24px" }}
-                          ></i>
-                        </a>
-                      </li>
-                    </ul>
+               <div className="mb-3">
+                  <div className="d-flex align-items-center gap-2 " style={{width:"100%"}}>
+                    <i className="fa fa-map-marker"></i>
+                    <span style={{ fontWeight: "bold" ,marginLeft:"8px"}}>Address</span>
                   </div>
+                  <p className=" mb-0" style={{marginTop:"8px"}} >
+                    {address || "4321 California St, San Francisco, CA 12345"}
+                  </p>
+                </div>
+
+                {/* Phone */}
+                <div className="mb-3">
+                  <div className="d-flex align-items-center gap-2">
+                    <i className="fa fa-phone"></i>
+                    <span style={{ fontWeight: "bold" ,marginLeft:"8px"}}>Phone</span>
+                  </div>
+                  <p className="mb-0" style={{marginTop:"8px"}}>{phone || "+1 123 456 1234"}</p>
+                </div>
+
+                {/* Email */}
+                <div className="mb-3">
+                  <div className="d-flex align-items-center gap-2">
+                    <i className="fa fa-envelope"></i>
+                    <span style={{ fontWeight: "bold" ,marginLeft:"8px" }}>Email</span>
+                  </div>
+                  <p className="mb-0" style={{marginTop:"8px"}}>{email || "info@company.com"}</p>
+                </div>
+                <div className="social " style={{display:"flex",gap:"10px"}}>
+                  <a href={instagram || "#"}><i className="fa fa-instagram"></i></a>
+                  <a href={linkedin || "#"}><i className="fa fa-linkedin"></i></a>
                 </div>
               </div>
             </div>
           </div>
-
-     
-          {/* <div className="col-md-12"></div> */}
-
-          {/* Floating WhatsApp & Arrow Up Buttons */}
-          <div className="floating-icons">
-            {/* WhatsApp Floating Button */}
-            <a
-              href={`https://wa.me/+91${mobile}`}
-              className="floating-btn whatsapp"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fa fa-whatsapp"></i>
-            </a>
-
-            {/* Arrow Up Floating Button */}
-            {isVisible && (
-              <button className="floating-btn arrow-up" onClick={scrollToTop}>
-                <i className="fa fa-arrow-up"></i>
-              </button>
-            )}
-          </div>
         </div>
+      </div>
+
+      {/* Floating Buttons */}
+      <div className="floating-icons">
+        <a href={`https://wa.me/${mobile}`} className="floating-btn whatsapp" target="_blank" rel="noopener noreferrer">
+          <i className="fa fa-whatsapp"></i>
+        </a>
+        {isVisible && (
+          <button className="floating-btn arrow-up" onClick={scrollToTop}>
+            <i className="fa fa-arrow-up"></i>
+          </button>
+        )}
       </div>
 
       {/* Footer */}
-      <div
-        id="footer"
-        style={{
-          backgroundColor: "#f1f1f1",
-          padding: "5px 0",
-          textAlign: "center",
-        }}
-      >
-        <div className="container">
-          <p>
-            &copy; {new Date().getFullYear()}{" "}
-            <a href="https://bmtechx.in/">BMTECHx.in</a> All Rights Reserved
-          </p>
-        </div>
-      </div>
+      <footer id="footer">
+        <p>&copy; {new Date().getFullYear()} <a href="https://bmtechx.in/">BMTECHx.in</a> All Rights Reserved</p>
+      </footer>
     </div>
   );
 };
+

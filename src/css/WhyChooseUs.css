@@ -113,8 +113,8 @@
   /* Hover Effects */
   .feature-card:hover {
     transform: translateY(-5px);
-    /* box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); */
-    border-color: #007bff ;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    /* border-color: #9ACD32; */
   }
   
   .feature-card.odd:hover {
@@ -143,11 +143,12 @@
   .feature-card:hover .icon {
     transform: scale(1.2) rotate(8deg);
   }
-    
+
   /* Hide text initially */
   .feature-text {
     opacity: 0;
     height: 0;
+    font-size: small !important;
     overflow: hidden;
     transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out;
   }

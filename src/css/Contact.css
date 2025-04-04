@@ -1,39 +1,101 @@
+.contact-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+  background-color: #222;
+  color: white;
+}
+
+.contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.contact-column {
+  flex: 1 1 200px;
+  min-width: 250px;
+}
+
+.logo-img {
+  width: 250px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.contact-link {
+  color: white;
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+  color: #9ACD32 ;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons a {
+  font-size: 24px;
+  color: white;
+}
+
 .floating-icons {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    display: flex;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 1000;
+}
+
+.floating-btn {
+  width: 50px;
+  height: 50px;
+  background-color: #25d366;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  text-decoration: none;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.floating-btn:hover {
+  transform: scale(1.1);
+}
+
+.arrow-up {
+  background-color: #007bff;
+}
+
+@media (max-width: 768px) {
+  .contact-content {
     flex-direction: column;
-    gap: 15px;
-    z-index: 1000;
+    /* align-items: center;
+    text-align: center; */
+    gap: 10px;
+    padding: 10px;
   }
-  
-  .floating-btn {
-    width: 50px;
-    height: 50px;
-    background-color: #25d366; /* WhatsApp Green */
-    color: white;
-    border: none;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    text-decoration: none;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+
+  .contact-column {
+    width: 100%;
+    flex: 0;
   }
-  
-  .floating-btn:hover {
-    transform: scale(1.1);
+  .contact h3 {
+   padding: 0px;
+   margin-top: 0px;
+   padding-bottom: 0px;
   }
-  
-  .whatsapp {
-    background-color: #25d366; /* WhatsApp Green */
-  }
-  
-  .arrow-up {
-    background-color: #007bff; /* Blue */
-  }
-  
+}

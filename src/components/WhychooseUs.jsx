@@ -33,16 +33,12 @@ export const WhyChooseUs = ({ data }) => {
   }, [data]);
 
   return (
-    <div ref={sectionRef} className="features-section text-center" id="whychoose">
-      {/* Heading with animation */}
-      <motion.h1
-        className="main-about-title text-center pb-5 pt-5"
-        initial={{ opacity: 0, y: -30 }}
-        animate={isInView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 1, delay: 0.2 }}
-      >
-        Why Choose Us?
-      </motion.h1>
+    <div
+      className="section-title text-center"
+      id="whychoose"
+      data-aos="fade-up"
+    >
+      <h2 data-aos="zoom-in">Why Choose Us?</h2>
 
       <Container>
         <Row className="features-grid">
@@ -50,21 +46,45 @@ export const WhyChooseUs = ({ data }) => {
             <Col key={index} className="feature-col">
               <motion.div
                 className={`feature-card ${index % 2 === 0 ? "even" : "odd"} ${
-                  index === activeIndex || index === hoveredIndex ? "hovered" : ""
+                  index === hoveredIndex ? "hovered" : ""
                 }`}
                 initial={{ opacity: 0, scale: 0.8 }}
-                animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
+                data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
+                data-aos-delay={index * 100}
               >
                 <Card.Body>
-                  {/* FontAwesome Icons */}
-                  <div className="icon-container social">
-                    <i className={`fa ${feature.icon} icon`} style={{fontSize:"40px"}}></i>
+                  <div
+                    className="icon-container social"
+                    data-aos="flip-up"
+                    data-aos-delay="200"
+                  >
+                    <i
+                      className={`fa ${feature.icon} icon`}
+                      style={{
+                        fontSize: "40px",
+                        color: "#007bff",
+                        transition: "color 0.3s ease-in-out",
+                      }}
+                    ></i>
                   </div>
-                  <Card.Title className="mt-2 feature-title">{feature.text}</Card.Title>
-                  <p className="feature-text">{feature.description}</p>
+                  <Card.Title
+                    className="mt-2 feature-title"
+                    data-aos="fade-up"
+                    data-aos-delay="300"
+                  >
+                    {feature.text}
+                  </Card.Title>
+                  <p
+                    className="feature-text"
+                    data-aos="zoom-in"
+                    data-aos-delay="400"
+                  >
+                    {feature.description}
+                  </p>
                 </Card.Body>
               </motion.div>
             </Col>

@@ -51,6 +51,8 @@ import SmoothScroll from "smooth-scroll";
 import "./App.css";
 import {MetalFabric} from "./components/MetalFabric";
 import { WhyChooseUs } from "./components/WhychooseUs";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000,
@@ -61,6 +63,21 @@ const App = () => {
   const [landingPageData, setLandingPageData] = useState({});
   useEffect(() => {
     setLandingPageData(JsonData);
+  }, []);
+  useEffect(() => {
+    AOS.init({
+      duration: 1400, // Smooth animation
+      easing: "ease-in-out", // Natural flow
+      once: false, // Ensures animation plays every time it's in view
+      offset: 120, // Triggers slightly before entering viewport
+    });
+
+    // Refresh AOS on scroll to re-trigger animations
+    window.addEventListener("scroll", AOS.refresh);
+
+    return () => {
+      window.removeEventListener("scroll", AOS.refresh);
+    };
   }, []);
 
   return (

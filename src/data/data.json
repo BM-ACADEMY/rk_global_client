@@ -8,17 +8,17 @@
     "slides": [
       {
         "image": "img/technology.jpg",
-        "text": "We are a Landing Page",
+        "text": "Information Technology ",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
       },
       {
         "image": "img/import-and-export.jpg",
-        "text": "Explore Our Services",
+        "text": "Import and Export Services",
         "description": "We provide world-class IT solutions for your business."
       },
       {
         "image": "img/metal.jpg",
-        "text": "Join Our Team",
+        "text": "Human Resource hiring",
         "description": "Exciting career opportunities are waiting for you!"
       }
     ]
@@ -213,7 +213,7 @@
     "instagram": "https://www.instagram.com/rkglobalassociatees/",
     "linkedin": "https://www.linkedin.com/in/raghul-kumaran-638b05140?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     "youtube": "youtube.com",
-    "description": "<b>RK Global Associates</b> is a forward-thinking <b>technology solutions provider</b>, helping businesses navigate their <b>digital transformation</b> and achieve exceptional results.We specialize in delivering innovative, customized solutions in <b>Industrial & Commercial<br> Solutions, Safety Equipment, Material Import & Export, Metal Fabrication & Engineering</b>,and <b>IT Consulting.</b>",
+    "description": "RK Global Associates is a forward-thinking technology solutions provider, helping businesses navigate their digital transformation and achieve exceptional results.We specialize in delivering innovative, customized solutions in Industrial & Commercial Solutions, Safety Equipment, Material Import & Export, Metal Fabrication & Engineering,and IT Consulting",
     "usefulLinks": [
       { "name": "Home", "url": "header" },
       { "name": "About", "url": "about" },
@@ -237,14 +237,6 @@
       },
       {
         "name": "Metal Fabrication & Engineering",
-        "url": "services"
-      },
-      {
-        "name": "Logistics & Supply Chain Solutions",
-        "url": "services"
-      },
-      {
-        "name": "Maintenance & Repair Services",
         "url": "services"
       }
     ]
