@@ -69,7 +69,7 @@ export const Header = ({ data, carousel }) => {
                     />
 
                     <h1>{slide.text}</h1>
-                    <p>{slide.description}</p>
+                    {/* <p>{slide.description}</p> */}
 
                     {slide.points && slide.points.length > 0 && (
                       <>

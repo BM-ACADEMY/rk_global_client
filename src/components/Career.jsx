@@ -366,7 +366,7 @@ const JobApplicationForm = ({ handleClose }) => {
             !formData.file
           }
         >
-          {loading ? "Submitting..." : "Apply"}
+          {loading ? "Submitting..." : "Enquire Now"}
         </Button>
       </DialogActions>
     </>
