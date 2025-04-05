@@ -294,7 +294,7 @@ export const Navigation = (props) => {
               {/* Career link triggers modal */}
               <li>
                 <a href="#" onClick={() => setOpenModal(true)}>
-                  APPLY
+                  ENQUIRY
                 </a>
               </li>
 

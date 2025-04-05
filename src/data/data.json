@@ -11,41 +11,46 @@
         "text": "We are Hiring",
         "description": "Enterprise IT Services That Empower Innovation and Operational Excellence.Your Strategic IT Partner for Transformation and Growth.",
         "points":[""],
-        "button-text":"Apply Now"
+        "button-text":"Apply Now",
+        "call-button":""
       },
       {
         "image": "img/course-and-training.jpeg",
         "text": "Build Skills. Boost Careers. Bridge the Gap",
         "description": "Empowering individuals and organizations through skill-focused, real-world training programs. ",
         "points":["Course Focus Areas","IT & Software Development","Industrial Skills & Safety","HR, Payroll & Recruitment Training","Business Tools (Tally, MS Office, ERP)","Communication & Soft Skills","Corporate Workshops & In-House Training"],
-        "button-text":"Enroll Now"
+        "button-text":"Enroll Now",
+        "call-button":""
       },
       {
         "image": "img/import-and-export.jpg",
         "text": "Your Global Trade Partner for Industrial Growths",
         "description": "We specialize in the import and export of industrial machinery and spare parts, offering reliable sourcing, timely delivery, and custom solutions for your business needs.",
         "points":[""],
-        "button-text":"Start Trading with Us"
+        "button-text":"Start Trading with Us",
+        "call-button":""
       },
       {
         "image": "img/hiring.jpg",
         "text": "Your End-to-End IT Partner for a Smarter Tomorrow",
         "description": "We deliver secure, reliable, and customized IT services that align with your business goals and accelerate growth.",
         "points":[""],
-        "button-text":"Partner with Us "
+        "button-text":"Partner with Us ",
+        "call-button":""
       },
       {
         "image": "img/industrial-commercial.jpg",
         "text": "Precision Metal Fabrication That Powers Performance",
         "description": "From CNC to VNC cutting, we provide accurate and efficient metal fabrication services tailored to industrial and commercial applications.",
         "points":[""],
-        "button-text":"Get a Custom Quote"
+        "button-text":"Get a Custom Quote",
+        "call-button":"Call Now"
       }
     ]
   },
   "About": {
     "Paragraph": [
-      "<b>RK Global Associates</b> is a forward-thinking <b>technology solutions provider</b>, helping businesses navigate their<b> digital transformation</b> and achieve exceptional results. We specialize in delivering innovative, customized solutions in <b>Industrial & Commercial Solutions, Safety Equipment, Material Import & Export, Metal Fabrication & Engineering, and  IT Consulting.</b> Adopting an agile, startup-like mindset, we focus on building strong and scalable strategies that enhance user engagement and drive business growth. With a commitment to excellence, we take a thorough, strategic approach to each project, ensuring that we understand every critical aspect before delivering solutions that matter."
+      "<b>RK Global Associatees</b> is a multifaceted enterprise specializing in <b>IT Services, Professional Training, Industrial & Commercial Solutions, and Import & Export Operations.</b> With a steadfast focus on innovation, precision, and<b> global business excellence,</b> we empower organizations to thrive in an evolving landscape by delivering <b>technology-driven solutions, skill development programs, industrial expertise, and seamless global trade services.</b>Our dynamic approach combines cutting-edge technology, advanced engineering, and international business strategies, ensuring our clients achieve long-term growth and sustainable success."
     ],
     "Mission": {
       "Text": "To be a trusted global partner delivering transformative IT solutions, workforce development programs, precision-driven industrial services, and efficient global trade operations, helping businesses optimize performance, efficiency, and market reach.",
@@ -165,38 +170,38 @@
   ],
   "Testimonials": [
     {
-      "img": "img/testimonials/01.jpg",
+      "img": "img/testimonials/1.jpg",
       "title": "Excellent Service & Quality Products",
       "text": "RK Global Associates has been a reliable partner for our industrial and commercial needs. Their high-quality safety equipment and commitment to safety standards have made our workplace much more secure. Highly recommended!",
-      "name": "Ethan",
+      "name": "Pooja Mehra",
       "rating": 5
     },
     {
-      "img": "img/testimonials/02.jpg",
+      "img": "img/testimonials/2.jpg",
       "title": "Professional & Efficient Material Import & Export",
       "text": "We have been sourcing industrial materials through RK Global Associates for over a year, and their import-export services are seamless. Timely delivery and exceptional customer service make them stand out in the industry.",
-      "name": "Noah",
+      "name": "Ananya Verma",
       "rating": 4
     },
     {
-      "img": "img/testimonials/03.jpg",
+      "img": "img/testimonials/3.jpg",
       "title": "Reliable Metal Fabrication & Engineering Solutions",
       "text": "The metal fabrication services provided by RK Global Associates are top-notch. Their precision and attention to detail helped us complete our construction project on time. Great expertise in engineering!",
-      "name": "Lucas",
+      "name": "Rahul Sharma",
       "rating": 4
     },
     {
-      "img": "img/testimonials/04.jpg",
+      "img": "img/testimonials/4.jpg",
       "title": "High-Quality Industrial & Commercial Products",
-      "text": "RK Global Associates has been our go-to supplier for industrial and commercial materials. Their wide range of products, combined with competitive pricing, makes them a trusted partner for our business.",
-      "name": "Olivia",
+      "text": "I just want to let you know that I think you provide an amazing customer service. There are issues and teething problems with most technical products (mine were extreme!), but that’s ok if the technical support is good which is definitely the case with  RK Global Associates. Very happy that I went with your company",
+      "name": "Vikrant Singh",
       "rating": 5
     },
     {
-      "img": "img/testimonials/05.jpg",
+      "img": "img/testimonials/5.jpg",
       "title": "Best in Safety Equipment & Compliance",
-      "text": "When it comes to safety equipment, RK Global Associates never disappoints. Their products meet all safety regulations, and their team ensures we get the right solutions for our industry needs. Excellent service!",
-      "name": "Aiden",
+      "text": "The equipment looks great and is really easy for the public to use, and RK Global Associates. Very happy that I went with your company have supported us in making sure that we are providing a quality service.",
+      "name": "Aman Chaudhary",
       "rating": 5
     }
   ],
@@ -233,30 +238,58 @@
     "instagram": "https://www.instagram.com/rkglobalassociatees/",
     "linkedin": "https://www.linkedin.com/in/raghul-kumaran-638b05140?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     "youtube": "youtube.com",
-    "description": "RK Global Associates is a forward-thinking technology solutions provider, helping businesses navigate their digital transformation and achieve exceptional results.We specialize in delivering innovative, customized solutions in Industrial & Commercial Solutions, Safety Equipment, Material Import & Export, Metal Fabrication & Engineering,and IT Consulting",
+    "description": "<b>Innovate. Transform. Succeed.</b><br><br> <b>RK Global Associates </b> empowers businesses with advanced IT solutions, workforce development, industrial expertise, and global trade facilitation.",
     "usefulLinks": [
       { "name": "Home", "url": "header" },
       { "name": "About", "url": "about" },
       { "name": "IT Services", "url": "services" },
       { "name": "Metal Fabrication & Engineering", "url": "works" },
-      { "name": "Apply ", "url": "career" },
+      { "name": "Enquiry ", "url": "career" },
       { "name": "Contact us", "url": "contact" }
     ],
     "ourWorks": [
       {
-        "name": "Industrial & Commercial Division",
+        "name": "  Import and Export of Machinery & Spares",
+        "url": "metal"
+      },
+      {
+        "name": "Fire and Safety Products",
+        "url": "metal"
+      },
+      {
+        "name": "Material Fabrications",
+        "url": "metal"
+      },
+      {
+        "name": "Industrial Lab Equipment (Quality Control)",
+        "url": "metal"
+      },
+      {
+        "name": "Metal Fabrication",
+        "url": "metal"
+      },
+      {
+        "name": "Digital Transformation",
         "url": "services"
       },
       {
-        "name": "Safety Equipment",
+        "name": "Managed IT Services",
         "url": "services"
       },
       {
-        "name": "Material Import & Export",
+        "name": "Digital Engineering",
         "url": "services"
       },
       {
-        "name": "Metal Fabrication & Engineering",
+        "name": "Courses & Training",
+        "url": "services"
+      },
+      {
+        "name": "Staff Augmentation",
+        "url": "services"
+      },
+      {
+        "name": "Hire Developer",
         "url": "services"
       }
     ]

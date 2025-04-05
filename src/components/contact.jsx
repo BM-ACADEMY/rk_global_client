@@ -235,7 +235,7 @@ export const Contact = ({ data = {} }) => {
                 data-aos-delay="200"
               >
                 <h3>Useful Links</h3>
-                <ul>
+                <ul style={{display:"flex",flexDirection:"column",gap:"8px",fontWeight:"bold"}}>
                   {usefulLinks.length > 0 ? (
                     usefulLinks.map((link, index) => (
                       <li key={index}>
@@ -257,11 +257,11 @@ export const Contact = ({ data = {} }) => {
                 data-aos-delay="300"
               >
                 <h3>Our Works</h3>
-                <ul>
+                <ul style={{display:"flex",flexDirection:"column",gap:"8px",fontWeight:"bold"}}>
                   {ourWorks.length > 0 ? (
                     ourWorks.map((work, index) => (
                       <li key={index}>
-                        <a href="#metal" className="contact-link">
+                        <a href={`#${work.url}`} className="contact-link">
                           {work.name}
                         </a>
                       </li>

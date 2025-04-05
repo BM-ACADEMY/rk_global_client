@@ -39,6 +39,7 @@ import JobApplicationForm from "../components/Career";
 export const Header = ({ data, carousel }) => {
   // Hooks must be at the top level
   const [openModal, setOpenModal] = useState(false);
+  const [mobile,setMobile] =useState("8760577352") ;
 
   // Check if carousel data exists
   if (!carousel?.slides?.length) return <h1>Loading...</h1>;
@@ -59,6 +60,28 @@ export const Header = ({ data, carousel }) => {
                 interval={5000}
                 stopOnHover={true}
                 showIndicators={true}
+                renderArrowPrev={(clickHandler, hasPrev) =>
+                  hasPrev && (
+                    <button
+                      className="custom-prev-button"
+                      onClick={clickHandler}
+                      aria-label="Previous Slide"
+                    >
+                      ❮
+                    </button>
+                  )
+                }
+                renderArrowNext={(clickHandler, hasNext) =>
+                  hasNext && (
+                    <button
+                      className="custom-next-button"
+                      onClick={clickHandler}
+                      aria-label="Next Slide"
+                    >
+                      ❯
+                    </button>
+                  )
+                }
               >
                 {carousel.slides.map((slide, index) => (
                   <div key={index} className="carousel-slide">
@@ -69,37 +92,53 @@ export const Header = ({ data, carousel }) => {
                     />
 
                     <h1>{slide.text}</h1>
-                    {/* <p>{slide.description}</p> */}
+                    <p>{slide.description}</p>
 
-                    {slide.points && slide.points.length > 0 && (
-                      <>
-                        <ul className="carousel-points left">
-                          {slide.points
-                            .slice(0, Math.ceil(slide.points.length / 2))
-                            .map((point, idx) => (
-                              <li key={idx}>{point}</li>
-                            ))}
-                        </ul>
-                        <ul className="carousel-points right">
-                          {slide.points
-                            .slice(Math.ceil(slide.points.length / 2))
-                            .map((point, idx) => (
-                              <li key={idx}>{point}</li>
-                            ))}
-                        </ul>
-                      </>
-                    )}
+                    {slide.points &&
+                      slide.points.filter((p) => p.trim() !== "").length >
+                        0 && (
+                        <>
+                          <ul className="carousel-points left">
+                            {slide.points
+                              .filter((p) => p.trim() !== "")
+                              .slice(0, Math.ceil(slide.points.length / 2))
+                              .map((point, idx) => (
+                                <li key={idx} data-text={point}></li>
+                              ))}
+                          </ul>
+                          <ul className="carousel-points right">
+                            {slide.points
+                              .filter((p) => p.trim() !== "")
+                              .slice(Math.ceil(slide.points.length / 2))
+                              .map((point, idx) => (
+                                <li key={idx} data-text={point}></li>
+                              ))}
+                          </ul>
+                        </>
+                      )}
 
-                    <a
-                      href="#"
-                      className="btn btn-custom btn-lg"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        setOpenModal(true);
-                      }}
-                    >
-                      {slide["button-text"] || "Learn More"}
-                    </a>
+<a
+  href="#"
+  className="btn btn-custom-2 btn-lg"
+  onClick={(e) => {
+    e.preventDefault();
+    setOpenModal(true);
+  }}
+>
+  {slide["button-text"] || "Learn More"}
+</a>
+
+{slide["call-button"] && mobile && (
+  <a
+    href={`https://wa.me/${mobile}`}
+    className="btn call-button btn-custom btn-lg"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    {slide["call-button"] || "Call Now"}
+  </a>
+)}
+
                   </div>
                 ))}
               </Carousel>
