@@ -9,7 +9,7 @@ export const Services = ({ data }) => {
       <div className="section-title" data-aos="zoom-in">
         <h2>IT Services</h2>
         <p>
-          IT services provide technology solutions like cybersecurity, cloud computing, and software development to enhance business efficiency and security.
+        Enterprise IT Services That Empower Innovation and Operational Excellence.Your Strategic IT Partner for Transformation and Growth.
         </p>
       </div>
 

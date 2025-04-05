@@ -206,15 +206,34 @@ export const Contact = ({ data = {} }) => {
           <div className="py-md-4 py-lg-4">
             <div className="contact-content">
               {/* First Column: Logo and Description */}
-              <div className="contact-column">
-               <div style={{backgroundColor:"white",padding:"2px",marginBottom:"5px" ,borderRadius:"4px"}}>
-               <img src={logo} alt="Company Logo" className="logo-img" />
-               </div>
-                <p dangerouslySetInnerHTML={{ __html: description || "Loading..." }} />
+              <div
+                className="contact-column"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <div
+                  style={{
+                    padding: "2px",
+                    marginBottom: "5px",
+                    borderRadius: "4px",
+                    marginRight: "15px",
+                  }}
+                >
+                  <img src={logo} alt="Company Logo" className="logo-img" />
+                </div>
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: description || "Loading...",
+                  }}
+                />
               </div>
 
               {/* Second Column: Useful Links */}
-              <div className="contact-column">
+              <div
+                className="contact-column"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
                 <h3>Useful Links</h3>
                 <ul>
                   {usefulLinks.length > 0 ? (
@@ -232,7 +251,11 @@ export const Contact = ({ data = {} }) => {
               </div>
 
               {/* Third Column: Our Works */}
-              <div className="contact-column">
+              <div
+                className="contact-column"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
                 <h3>Our Works</h3>
                 <ul>
                   {ourWorks.length > 0 ? (
@@ -250,14 +273,23 @@ export const Contact = ({ data = {} }) => {
               </div>
 
               {/* Fourth Column: Contact Info */}
-              <div className="contact-column">
+              <div
+                className="contact-column"
+                data-aos="fade-up"
+                data-aos-delay="400"
+              >
                 <h3>Contact Info</h3>
-               <div className="mb-3">
-                  <div className="d-flex align-items-center gap-2 " style={{width:"100%"}}>
+                <div className="mb-3">
+                  <div
+                    className="d-flex align-items-center gap-2"
+                    style={{ width: "100%" }}
+                  >
                     <i className="fa fa-map-marker"></i>
-                    <span style={{ fontWeight: "bold" ,marginLeft:"8px"}}>Address</span>
+                    <span style={{ fontWeight: "bold", marginLeft: "8px" }}>
+                      Address
+                    </span>
                   </div>
-                  <p className=" mb-0" style={{marginTop:"8px"}} >
+                  <p className="mb-0" style={{ marginTop: "8px" }}>
                     {address || "4321 California St, San Francisco, CA 12345"}
                   </p>
                 </div>
@@ -266,22 +298,38 @@ export const Contact = ({ data = {} }) => {
                 <div className="mb-3">
                   <div className="d-flex align-items-center gap-2">
                     <i className="fa fa-phone"></i>
-                    <span style={{ fontWeight: "bold" ,marginLeft:"8px"}}>Phone</span>
+                    <span style={{ fontWeight: "bold", marginLeft: "8px" }}>
+                      Phone
+                    </span>
                   </div>
-                  <p className="mb-0" style={{marginTop:"8px"}}>{phone || "+1 123 456 1234"}</p>
+                  <p className="mb-0" style={{ marginTop: "8px" }}>
+                    {phone || "+1 123 456 1234"}
+                  </p>
                 </div>
 
                 {/* Email */}
                 <div className="mb-3">
                   <div className="d-flex align-items-center gap-2">
                     <i className="fa fa-envelope"></i>
-                    <span style={{ fontWeight: "bold" ,marginLeft:"8px" }}>Email</span>
+                    <span style={{ fontWeight: "bold", marginLeft: "8px" }}>
+                      Email
+                    </span>
                   </div>
-                  <p className="mb-0" style={{marginTop:"8px"}}>{email || "info@company.com"}</p>
+                  <p className="mb-0" style={{ marginTop: "8px" }}>
+                    {email || "info@company.com"}
+                  </p>
                 </div>
-                <div className="social " style={{display:"flex",gap:"10px"}}>
-                  <a href={instagram || "#"}><i className="fa fa-instagram"></i></a>
-                  <a href={linkedin || "#"}><i className="fa fa-linkedin"></i></a>
+
+                <div
+                  className="social"
+                  style={{ display: "flex", gap: "10px" }}
+                >
+                  <a href={instagram || "#"}>
+                    <i className="fa fa-instagram"></i>
+                  </a>
+                  <a href={linkedin || "#"}>
+                    <i className="fa fa-linkedin"></i>
+                  </a>
                 </div>
               </div>
             </div>
@@ -291,7 +339,12 @@ export const Contact = ({ data = {} }) => {
 
       {/* Floating Buttons */}
       <div className="floating-icons">
-        <a href={`https://wa.me/${mobile}`} className="floating-btn whatsapp" target="_blank" rel="noopener noreferrer">
+        <a
+          href={`https://wa.me/${mobile}`}
+          className="floating-btn whatsapp"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <i className="fa fa-whatsapp"></i>
         </a>
         {isVisible && (
@@ -303,9 +356,11 @@ export const Contact = ({ data = {} }) => {
 
       {/* Footer */}
       <footer id="footer">
-        <p>&copy; {new Date().getFullYear()} <a href="https://bmtechx.in/">BMTECHx.in</a> All Rights Reserved</p>
+        <p>
+          &copy; {new Date().getFullYear()}{" "}
+          <a href="https://bmtechx.in/">BMTECHx.in</a> All Rights Reserved
+        </p>
       </footer>
     </div>
   );
 };
-

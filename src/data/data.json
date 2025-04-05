@@ -7,19 +7,39 @@
   "HeaderData": {
     "slides": [
       {
-        "image": "img/technology.jpg",
-        "text": "Information Technology ",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        "image": "img/information-technology.jpg",
+        "text": "We are Hiring",
+        "description": "Enterprise IT Services That Empower Innovation and Operational Excellence.Your Strategic IT Partner for Transformation and Growth.",
+        "points":[""],
+        "button-text":"Apply Now"
+      },
+      {
+        "image": "img/course-and-training.jpeg",
+        "text": "Build Skills. Boost Careers. Bridge the Gap",
+        "description": "Empowering individuals and organizations through skill-focused, real-world training programs. ",
+        "points":["Course Focus Areas","IT & Software Development","Industrial Skills & Safety","HR, Payroll & Recruitment Training","Business Tools (Tally, MS Office, ERP)","Communication & Soft Skills","Corporate Workshops & In-House Training"],
+        "button-text":"Enroll Now"
       },
       {
         "image": "img/import-and-export.jpg",
-        "text": "Import and Export Services",
-        "description": "We provide world-class IT solutions for your business."
+        "text": "Your Global Trade Partner for Industrial Growths",
+        "description": "We specialize in the import and export of industrial machinery and spare parts, offering reliable sourcing, timely delivery, and custom solutions for your business needs.",
+        "points":[""],
+        "button-text":"Start Trading with Us"
       },
       {
-        "image": "img/metal.jpg",
-        "text": "Human Resource hiring",
-        "description": "Exciting career opportunities are waiting for you!"
+        "image": "img/hiring.jpg",
+        "text": "Your End-to-End IT Partner for a Smarter Tomorrow",
+        "description": "We deliver secure, reliable, and customized IT services that align with your business goals and accelerate growth.",
+        "points":[""],
+        "button-text":"Partner with Us "
+      },
+      {
+        "image": "img/industrial-commercial.jpg",
+        "text": "Precision Metal Fabrication That Powers Performance",
+        "description": "From CNC to VNC cutting, we provide accurate and efficient metal fabrication services tailored to industrial and commercial applications.",
+        "points":[""],
+        "button-text":"Get a Custom Quote"
       }
     ]
   },
@@ -120,26 +140,26 @@
   "MetalFabric": [
     {
       "id": 1,
-      "title": "Industrial & Commercial Division",
-      "description": "RK Global Associates enhances operational efficiency with expert system integration and machinery solutions, helping businesses streamline processes, reduce costs, and boost performance.",
-      "image": "img/industrial.jpg"
+      "title": " Import & Export of Machinery and Spares",
+      "description": " We offer reliable import and export services for industrial machinery and spare parts, sourced from trusted global manufacturers. Our solutions are timely, cost-effective, and tailored to various industry needs.",
+      "image": "img/export.jpg"
     },
     {
       "id": 2,
-      "title": "Safety Equipment",
-      "description": "We provide high-quality safety gear, including helmets, harnesses, and protective equipment, ensuring workplace safety, risk reduction, and regulatory compliance.",
+      "title": "Fire and Safety Products",  
+      "description": "Our fire and safety range includes extinguishers, alarms, safety gear, and emergency response equipment. All products meet high safety standards, ensuring protection for people, property, and industrial environments.",
       "image": "img/safety-equipment.jpg"
     },
     {
       "id": 3,
-      "title": "Material Import & Export",
-      "description": "We specialize in global material sourcing, managing logistics, compliance, and timely deliveries to support seamless international trade and expand your market reach.",
-      "image": "img/export.jpg"
+      "title": "Industrial Lab Equipment (Quality Control)",
+      "description": " We supply top-quality lab equipment designed for industrial quality control and testing. Our products help maintain compliance, accuracy, and consistency across operations.",
+      "image": "img/lab-quality.jpg"
     },
     {
       "id": 4,
-      "title": "Metal Fabrication & Engineering",
-      "description": "Our custom metal fabrication solutions ensure precision, durability, and quality, catering to diverse industrial applications, from design to final installation.",
+      "title": "Metal Fabrication Services",
+      "description": " We provide expert <b>metal fabrication services </b>for industrial and commercial needs, specializing in<b> CNC and VNC cutting.</b> Our solutions ensure precision, durability, and on-time delivery. Customization is at the core of every project we handle. ",
       "image": "img/metal-fabrication.jpg"
     }
   ],

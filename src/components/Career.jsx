@@ -56,6 +56,9 @@ const JobApplicationForm = ({ handleClose }) => {
     if (!formData.position.trim()) {
       newErrors.position = "Position is required";
     }
+    if (!formData.subject.trim()) {
+      newErrors.subject = "Subject is required";
+    }
 
     if (!formData.message.trim()) {
       newErrors.message = "Message is required";
@@ -218,7 +221,7 @@ const JobApplicationForm = ({ handleClose }) => {
         `}
       </style>
       <DialogTitle style={{ color: "#007bff", fontWeight: "bold" }}>
-        <h3>Job Application</h3>
+        <h3>Apply Now / Enquery</h3>
       </DialogTitle>
       <DialogContent>
         <TextField
@@ -256,7 +259,7 @@ const JobApplicationForm = ({ handleClose }) => {
         <TextField
           fullWidth
           name="position"
-          label="Position Apply For / Query / Training"
+          label="Position Apply For / Enquery "
           margin="dense"
           required
           onChange={handleChange}
@@ -268,7 +271,10 @@ const JobApplicationForm = ({ handleClose }) => {
           name="subject"
           label="Subject (Optional)"
           margin="dense"
+          required
           onChange={handleChange}
+          error={!!errors.subject}
+          helperText={errors.subject}
         />
         <TextField
           fullWidth
@@ -355,6 +361,7 @@ const JobApplicationForm = ({ handleClose }) => {
             !formData.email ||
             !formData.phone ||
             !formData.position ||
+            !formData.subject ||
             !formData.message ||
             !formData.file
           }

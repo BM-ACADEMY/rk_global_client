@@ -9,7 +9,7 @@ export const MetalFabric = ({ data }) => {
     <div className="section-title" data-aos="zoom-in">
       <h2>Metal Fabrication & Engineering</h2>
       <p>
-        We provide high-quality metal fabrication and engineering solutions to meet industry standards.
+      Robust Engineering Solutions for Industrial and Commercial Excellence. Enabling Seamless Trade Through Strategic Global Partnerships
       </p>
     </div>
     <div className="metal-grid">
@@ -35,7 +35,8 @@ export const MetalFabric = ({ data }) => {
               />
               <div className="metal-content" data-aos="fade-up" data-aos-delay="300">
                 <h3>{service.title}</h3>
-                <p>{service.description}</p>
+                <p dangerouslySetInnerHTML={{ __html: service.description }}></p>
+
               </div>
             </motion.div>
           ))

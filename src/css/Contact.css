@@ -17,12 +17,15 @@
 .contact-column {
   flex: 1 1 200px;
   min-width: 250px;
+  margin-right: 19px;
 }
 
 .logo-img {
-  width: 250px;
+  width: 110px;
   height: auto;
   margin-bottom: 10px;
+  background-color: white;
+  padding: 8px;
 }
 
 .contact-link {

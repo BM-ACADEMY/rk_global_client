@@ -1,7 +1,7 @@
 // import React from "react";
 
 // export const Header = (props) => {
-  
+
 //   return (
 //     <header id="header">
 //       <div className="intro">
@@ -59,28 +59,6 @@ export const Header = ({ data, carousel }) => {
                 interval={5000}
                 stopOnHover={true}
                 showIndicators={true}
-                // renderArrowPrev={(clickHandler, hasPrev) =>
-                //   hasPrev && (
-                //     <button
-                //       className="custom-prev-button"
-                //       onClick={clickHandler}
-                //       aria-label="Previous Slide"
-                //     >
-                //       ❮
-                //     </button>
-                //   )
-                // }
-                // renderArrowNext={(clickHandler, hasNext) =>
-                //   hasNext && (
-                //     <button
-                //       className="custom-next-button"
-                //       onClick={clickHandler}
-                //       aria-label="Next Slide"
-                //     >
-                //       ❯
-                //     </button>
-                //   )
-                // }
               >
                 {carousel.slides.map((slide, index) => (
                   <div key={index} className="carousel-slide">
@@ -89,8 +67,29 @@ export const Header = ({ data, carousel }) => {
                       alt={`Slide ${index + 1}`}
                       className="carousel-image"
                     />
+
                     <h1>{slide.text}</h1>
                     <p>{slide.description}</p>
+
+                    {slide.points && slide.points.length > 0 && (
+                      <>
+                        <ul className="carousel-points left">
+                          {slide.points
+                            .slice(0, Math.ceil(slide.points.length / 2))
+                            .map((point, idx) => (
+                              <li key={idx}>{point}</li>
+                            ))}
+                        </ul>
+                        <ul className="carousel-points right">
+                          {slide.points
+                            .slice(Math.ceil(slide.points.length / 2))
+                            .map((point, idx) => (
+                              <li key={idx}>{point}</li>
+                            ))}
+                        </ul>
+                      </>
+                    )}
+
                     <a
                       href="#"
                       className="btn btn-custom btn-lg"
@@ -99,7 +98,7 @@ export const Header = ({ data, carousel }) => {
                         setOpenModal(true);
                       }}
                     >
-                      Apply Now
+                      {slide["button-text"] || "Learn More"}
                     </a>
                   </div>
                 ))}
@@ -110,10 +109,37 @@ export const Header = ({ data, carousel }) => {
       </div>
 
       {/* Modal */}
-      <Dialog open={openModal} onClose={() => setOpenModal(false)} maxWidth="md" fullWidth>
+      <Dialog
+        open={openModal}
+        onClose={() => setOpenModal(false)}
+        maxWidth="md"
+        fullWidth
+      >
         <JobApplicationForm handleClose={() => setOpenModal(false)} />
       </Dialog>
     </header>
   );
 };
 
+// renderArrowPrev={(clickHandler, hasPrev) =>
+//   hasPrev && (
+//     <button
+//       className="custom-prev-button"
+//       onClick={clickHandler}
+//       aria-label="Previous Slide"
+//     >
+//       ❮
+//     </button>
+//   )
+// }
+// renderArrowNext={(clickHandler, hasNext) =>
+//   hasNext && (
+//     <button
+//       className="custom-next-button"
+//       onClick={clickHandler}
+//       aria-label="Next Slide"
+//     >
+//       ❯
+//     </button>
+//   )
+// }
