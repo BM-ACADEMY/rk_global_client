@@ -76,7 +76,7 @@
   text-decoration: none;
   transition: 0.3s ease-in-out;
 }
-.call-button {
+.carousel-slide a.btn-1 {
     position: absolute;
     top: 90%;
     left: 50%;
@@ -177,6 +177,21 @@
     z-index: 2;
   }
   
+  .carousel-points {
+    position: absolute;
+    top: 20%;
+    width: 20%;
+    max-width: 250px;
+    color: white;
+    z-index: 2;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    counter-reset: item;
+  }
+  
   .carousel-points.left {
     left: 5%;
     text-align: left;
@@ -227,6 +242,44 @@
     font-weight: 500;
   }
   
+  /* 🔽 Mobile View Style */
+  @media (max-width: 768px) {
+    .carousel-points {
+      position: static;
+      width: 100%;
+      max-width: none;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 20px;
+      padding-left: 20px;
+    }
+  
+    .carousel-points.left,
+    .carousel-points.right {
+      left: unset;
+      right: unset;
+      text-align: left;
+    }
+  
+    .carousel-points li {
+      font-size: 0.85rem;
+    }
+  
+    .carousel-points li::before {
+      width: 30px;
+      height: 30px;
+      font-size: 0.8rem;
+    }
+  
+    .carousel-points li::after {
+      font-size: 0.85rem;
+      min-width: 140px;
+      padding: 8px 16px 8px 24px;
+    }
+  }
+  
+  
   /* Hover effect */
   .carousel-points li:hover::before,
   .carousel-points li:hover::after {
@@ -236,3 +289,24 @@
   }
   
   
+@media (max-width: 768px) {
+    .carousel-slide h1 {
+        font-size: medium;
+        top: 36%;
+        left: 50%;
+    }
+    .carousel-slide p{
+        font-size: small;
+        top: 58%;
+        left: 50%;
+    }
+ 
+    .carousel-slide a.btn{
+        top: 75%;
+        left: 50%;
+    }
+    .carousel-slide a.btn-1{
+        top: 85%;
+        left: 50%;
+    }
+  }

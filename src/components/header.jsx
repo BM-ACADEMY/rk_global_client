@@ -39,7 +39,7 @@ import JobApplicationForm from "../components/Career";
 export const Header = ({ data, carousel }) => {
   // Hooks must be at the top level
   const [openModal, setOpenModal] = useState(false);
-  const [mobile,setMobile] =useState("8760577352") ;
+  const [mobile, setMobile] = useState("8760577352");
 
   // Check if carousel data exists
   if (!carousel?.slides?.length) return <h1>Loading...</h1>;
@@ -117,28 +117,27 @@ export const Header = ({ data, carousel }) => {
                         </>
                       )}
 
-<a
-  href="#"
-  className="btn btn-custom-2 btn-lg"
-  onClick={(e) => {
-    e.preventDefault();
-    setOpenModal(true);
-  }}
->
-  {slide["button-text"] || "Learn More"}
-</a>
+                    <a
+                      href="#"
+                      className="btn btn-custom-2 btn-lg"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setOpenModal(true);
+                      }}
+                    >
+                      {slide["button-text"] || "Learn More"}
+                    </a>
 
-{slide["call-button"] && mobile && (
-  <a
-    href={`https://wa.me/${mobile}`}
-    className="btn call-button btn-custom btn-lg"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    {slide["call-button"] || "Call Now"}
-  </a>
-)}
-
+                    {slide["call-button"] && mobile && (
+                      <a
+                        href={`https://wa.me/${mobile}`}
+                        className="btn btn-1 btn-custom btn-lg"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {slide["call-button"] || "Call Now"}
+                      </a>
+                    )}
                   </div>
                 ))}
               </Carousel>

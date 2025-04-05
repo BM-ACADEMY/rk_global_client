@@ -153,6 +153,7 @@ export const Navigation = (props) => {
               <img
                 src={logo}
                 alt="Company Logo"
+                className="logo"
                 style={{
                   maxHeight: "150px",
                   width: "200px",
