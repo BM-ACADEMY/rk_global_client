@@ -84,17 +84,18 @@ const App = () => {
   return (
     <div>
       <Navigation data={landingPageData.Header || {}} />
-      <Header data={landingPageData.Header || {}}  carousel={landingPageData.HeaderData || {}}/>
-      <About data={landingPageData.About} />
-      <Services data={landingPageData.Services} />
-      <MetalFabric data={landingPageData.MetalFabric || []} />
-      <Testimonials data={landingPageData.Testimonials || []} />
-      <WhyChooseUs data={landingPageData.WhyChooseUs} />
-      <Contact data={landingPageData.Contact} />
-   
-      
+      <div className="main-content">
+        <Header data={landingPageData.Header || {}} carousel={landingPageData.HeaderData || {}} />
+        <About data={landingPageData.About} />
+        <Services data={landingPageData.Services} />
+        <MetalFabric data={landingPageData.MetalFabric || []} />
+        <Testimonials data={landingPageData.Testimonials || []} />  
+        <WhyChooseUs data={landingPageData.WhyChooseUs} />
+        <Contact data={landingPageData.Contact} />
+      </div>
     </div>
   );
+  
 };
 
 export default App;

@@ -20,4 +20,7 @@
 [data-aos] {
   transition: all 1s ease-in-out !important;
 }
+.main-content {
+  margin-top: 80px; /* same as .navigation height */
+}
 
