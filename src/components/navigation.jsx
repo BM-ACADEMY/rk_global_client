@@ -165,7 +165,7 @@ export const Navigation = (props) => {
                 }}
               />
               <div
-              className="tagline"
+                className="tagline"
                 style={{
                   fontSize: "10px",
                   color: "#00378a",
@@ -205,8 +205,14 @@ export const Navigation = (props) => {
                   className="dropdown-toggle"
                   onClick={() => handleDropdown("it-service")}
                 >
-                  IT SERVICE <b className="caret"></b>
+                  IT SERVICE{" "}
+                  {openDropdown === "it-service" ? (
+                    <i className="fa fa-caret-up"></i>
+                  ) : (
+                    <i className="fa fa-caret-down"></i>
+                  )}
                 </a>
+
                 <ul className="dropdown-menu">
                   <li>
                     <a href="#services">Digital Transformation</a>
@@ -251,7 +257,11 @@ export const Navigation = (props) => {
                   }}
                 >
                   Main Industrial and Commercial Divisions{" "}
-                  <b className="caret"></b>
+                  {openDropdown === "metal-fabrication" ? (
+                    <i className="fa fa-caret-up"></i>
+                  ) : (
+                    <i className="fa fa-caret-down"></i>
+                  )}
                 </a>
 
                 <ul className="dropdown-menu">
@@ -270,6 +280,7 @@ export const Navigation = (props) => {
                     </a>
                   </li>
 
+                  {/* Sub Dropdown */}
                   <li
                     className={`dropdown-submenu ${
                       openSubDropdown === "sub-metal" ? "open" : ""
@@ -292,8 +303,14 @@ export const Navigation = (props) => {
                         }
                       }}
                     >
-                      Metal Fabrication
+                      Metal Fabrication{" "}
+                      {openSubDropdown === "sub-metal" ? (
+                        <i className="fa fa-caret-up"></i>
+                      ) : (
+                        <i className="fa fa-caret-down"></i>
+                      )}
                     </a>
+
                     <ul className="dropdown-menu">
                       <li>
                         <a href="#metal">CNC Cutting Products</a>
