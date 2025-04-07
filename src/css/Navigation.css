@@ -40,6 +40,10 @@
   }
 }
 
+.navbar-brand{
+line-height: 3px !important;
+} 
+
 /* Menu link styling */
 .dropdown-menu li a {
   color: #333;

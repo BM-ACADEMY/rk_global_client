@@ -167,10 +167,10 @@ export const Navigation = (props) => {
               <div
                 className="tagline"
                 style={{
-                  fontSize: "10px",
+                  fontSize: "7px",
                   color: "#00378a",
                   // marginTop: "5px",
-                  marginLeft: "8rem", // Applied only to the text
+                  marginLeft: "4.2rem", // Applied only to the text
                   textAlign: "start",
                 }}
               >
