@@ -13,7 +13,7 @@ body, html {
   font-weight: 400;
   width: 100% !important;
   min-height: 100vh;
-  overflow-x: hidden; /* Prevents horizontal scrolling */
+  /* overflow-x: hidden;  */
 
 }
 
@@ -114,7 +114,9 @@ hr {
   bottom: -1px;
   width: 0;
   height: 2px;
-  background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
+  /* background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
+   */
+   background: linear-gradient(to right, #00378a 0%, #9acd32 100%);
   content: "";
   transition: width 0.2s;
 }
