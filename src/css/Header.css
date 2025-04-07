@@ -39,7 +39,7 @@
 /* Text Styles */
 .carousel-slide h1 {
   position: absolute;
-  top: 55%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   /* font-size: 2.5rem; */
@@ -51,7 +51,7 @@
 
 .carousel-slide p {
   position: absolute;
-  top: 70%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 1.2rem;
@@ -288,7 +288,7 @@
 @media (max-width: 768px) {
   .carousel-slide h1 {
     font-size: 10px;
-    top: 18%;
+    top: 15%;
     left: 50%;
   }
   .carousel-slide p {
@@ -298,12 +298,12 @@
   }
 
   .carousel-slide a.btn {
-    top: 68%;
+    top: 75%;
     left: 50%;
     font-size: 7px;
   }
   .carousel-slide a.btn-1 {
-    top: 85%;
+    top: 90%;
     left: 50%;
   }
   .carousel-slide {

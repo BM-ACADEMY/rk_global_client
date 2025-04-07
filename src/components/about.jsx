@@ -65,7 +65,7 @@ export const About = ({ data }) => {
             data-aos="zoom-in-right"
             data-aos-delay="200"
           >
-            <div className="card-content">
+            <div className="card-content-mission">
               <div className="icon">
                 <i className="fa fa-bullseye"></i>
               </div>
@@ -85,7 +85,7 @@ export const About = ({ data }) => {
             data-aos="zoom-in-left"
             data-aos-delay="600"
           >
-            <div className="card-content">
+            <div className="card-content-vision">
               <div className="icon">
               <i className="fa fa-lightbulb-o"></i> 
               </div>

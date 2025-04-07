@@ -130,7 +130,7 @@ export const Header = ({ data, carousel }) => {
 
                     {slide["call-button"] && mobile && (
                       <a
-                        href={`https://wa.me/${mobile}`}
+                        href={`https://wa.me/+91${mobile}`}
                         className="btn btn-1 btn-custom btn-lg"
                     
                         target="_blank"
