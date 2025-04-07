@@ -205,7 +205,7 @@ export const Navigation = (props) => {
                   className="dropdown-toggle"
                   onClick={() => handleDropdown("it-service")}
                 >
-                  IT SERVICE{" "}
+                  IT SERVICES{" "}
                   {openDropdown === "it-service" ? (
                     <i className="fa fa-caret-up"></i>
                   ) : (
@@ -225,6 +225,9 @@ export const Navigation = (props) => {
                   </li>
                   <li>
                     <a href="#services">Staff Augmentation</a>
+                  </li>
+                  <li>
+                    <a href="#services">Hire Developer</a>
                   </li>
                 </ul>
               </li>
