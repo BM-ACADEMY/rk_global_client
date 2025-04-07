@@ -64,7 +64,11 @@
 @media (max-width: 768px) {
 .logo{
   max-height: 120px !important;
-  width: 150px !important;
+  width: 110px !important;
+}
+.tagline{
+  font-size: 7px !important;
+  margin-left: 4rem !important;
 }
 }
 

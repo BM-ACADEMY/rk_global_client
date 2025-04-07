@@ -93,6 +93,7 @@ hr {
   font-weight: 700;
   color: #333;
   text-transform: uppercase;
+
 }
 #menu.navbar-default .navbar-nav > li > a {
   font-family: "Lato", sans-serif;
@@ -643,5 +644,8 @@ label {
 @media (max-width: 768px) {
   #about img {
     margin: 50px 0;
+  }
+  #about  {
+    padding: 0px !important;
   }
 }

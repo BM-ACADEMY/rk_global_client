@@ -148,18 +148,34 @@ export const Navigation = (props) => {
             <a
               className="navbar-brand page-scroll"
               href="#page-top"
-              style={{ display: "flex", alignItems: "center" }}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                flexDirection: "column",
+              }}
             >
               <img
                 src={logo}
                 alt="Company Logo"
                 className="logo"
                 style={{
-                  maxHeight: "150px",
-                  width: "200px",
+                  maxHeight: "60px", // Reduced height
+                  width: "120px", // Reduced width
                   marginRight: "10px",
                 }}
               />
+              <div
+              className="tagline"
+                style={{
+                  fontSize: "10px",
+                  color: "#00378a",
+                  // marginTop: "5px",
+                  marginLeft: "8rem", // Applied only to the text
+                  textAlign: "start",
+                }}
+              >
+                Ultimate Of All Time
+              </div>
             </a>
           </div>
 
@@ -240,9 +256,7 @@ export const Navigation = (props) => {
 
                 <ul className="dropdown-menu">
                   <li>
-                    <a href="#metal">
-                      Import and Export of Machinery & Spares
-                    </a>
+                    <a href="#metal">Import and Export of Machinery & Spares</a>
                   </li>
                   <li>
                     <a href="#metal">Fire and Safety Products</a>

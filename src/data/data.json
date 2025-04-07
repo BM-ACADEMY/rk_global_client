@@ -7,44 +7,52 @@
   "HeaderData": {
     "slides": [
       {
-        "image": "img/information-technology.jpg",
+        "image": "img/header/header-1.jpg",
         "text": "We are Hiring",
         "description": "Enterprise IT Services That Empower Innovation and Operational Excellence.Your Strategic IT Partner for Transformation and Growth.",
-        "points":[""],
-        "button-text":"Apply Now",
-        "call-button":""
+        "points": [""],
+        "button-text": "Apply Now",
+        "call-button": ""
       },
       {
-        "image": "img/course-and-training.jpeg",
+        "image": "img/header/header-4.jpg",
         "text": "Build Skills. Boost Careers. Bridge the Gap",
         "description": "Empowering individuals and organizations through skill-focused, real-world training programs. ",
-        "points":["Course Focus Areas","IT & Software Development","Industrial Skills & Safety","HR, Payroll & Recruitment Training","Business Tools (Tally, MS Office, ERP)","Communication & Soft Skills","Corporate Workshops & In-House Training"],
-        "button-text":"Enroll Now",
-        "call-button":""
+        "points": [
+          "Course Focus Areas",
+          "IT & Software Development",
+          "Industrial Skills & Safety",
+          "HR, Payroll & Recruitment Training",
+          "Business Tools (Tally, MS Office, ERP)",
+          "Communication & Soft Skills",
+          "Corporate Workshops & In-House Training"
+        ],
+        "button-text": "Enroll Now",
+        "call-button": ""
       },
       {
-        "image": "img/import-and-export.jpg",
+        "image": "img/header/header-2.jpg",
         "text": "Your Global Trade Partner for Industrial Growths",
         "description": "We specialize in the import and export of industrial machinery and spare parts, offering reliable sourcing, timely delivery, and custom solutions for your business needs.",
-        "points":[""],
-        "button-text":"Start Trading with Us",
-        "call-button":""
+        "points": [""],
+        "button-text": "Start Trading with Us",
+        "call-button": ""
       },
       {
-        "image": "img/hiring.jpg",
+        "image": "img/header/header-5.jpg",
         "text": "Your End-to-End IT Partner for a Smarter Tomorrow",
         "description": "We deliver secure, reliable, and customized IT services that align with your business goals and accelerate growth.",
-        "points":[""],
-        "button-text":"Partner with Us ",
-        "call-button":""
+        "points": [""],
+        "button-text": "Partner with Us ",
+        "call-button": ""
       },
       {
-        "image": "img/industrial-commercial.jpg",
+        "image": "img/header/header-3.jpg",
         "text": "Precision Metal Fabrication That Powers Performance",
         "description": "From CNC to VNC cutting, we provide accurate and efficient metal fabrication services tailored to industrial and commercial applications.",
-        "points":[""],
-        "button-text":"Get a Custom Quote",
-        "call-button":"Call Now"
+        "points": [""],
+        "button-text": "Get a Custom Quote",
+        "call-button": "Call Now"
       }
     ]
   },
@@ -151,7 +159,7 @@
     },
     {
       "id": 2,
-      "title": "Fire and Safety Products",  
+      "title": "Fire and Safety Products",
       "description": "Our fire and safety range includes extinguishers, alarms, safety gear, and emergency response equipment. All products meet high safety standards, ensuring protection for people, property, and industrial environments.",
       "image": "img/safety-equipment.jpg"
     },
@@ -316,33 +324,31 @@
       "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
     }
   ],
-"WhyChooseUs": [
-  {
-    "icon": "fa-globe",
-    "text": "Global Presence",
-    "description": "Operating across multiple industries worldwide."
-  },
-  {
-    "icon": "fa-graduation-cap",
-    "text": "Expert Team",
-    "description": "Experienced professionals in diverse fields."
-  },
-  {
-    "icon": "fa-search",
-    "text": "Tailored Solutions",
-    "description": "Customized services for unique business needs."
-  },
-  {
-    "icon": "fa-line-chart",
-    "text": "Proven Success",
-    "description": "Track record of successful projects & satisfied clients."
-  },
-  {
-    "icon": "fa-trophy",
-    "text": "Quality & Compliance",
-    "description": "Meeting international standards & regulations."
-  }
-]
-
-  
-} 
+  "WhyChooseUs": [
+    {
+      "icon": "fa-globe",
+      "text": "Global Presence",
+      "description": "Operating across multiple industries worldwide."
+    },
+    {
+      "icon": "fa-graduation-cap",
+      "text": "Expert Team",
+      "description": "Experienced professionals in diverse fields."
+    },
+    {
+      "icon": "fa-search",
+      "text": "Tailored Solutions",
+      "description": "Customized services for unique business needs."
+    },
+    {
+      "icon": "fa-line-chart",
+      "text": "Proven Success",
+      "description": "Track record of successful projects & satisfied clients."
+    },
+    {
+      "icon": "fa-trophy",
+      "text": "Quality & Compliance",
+      "description": "Meeting international standards & regulations."
+    }
+  ]
+}

@@ -1,25 +1,25 @@
 .header-logo {
   max-width: 200px;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 
 /* Carousel Slide */
 .carousel-slide {
-    position: relative;
-    width: 100%;
-    height: 60vh; /* Full viewport height */
-    display: flex;
-    justify-content: flex-start; /* Align content to the left */
-    align-items: center; /* Center vertically */
-    text-align: center; /* Optional: aligns text */
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 60vh; /* Full viewport height */
+  display: flex;
+  justify-content: flex-start; /* Align content to the left */
+  align-items: center; /* Center vertically */
+  text-align: center; /* Optional: aligns text */
+  overflow: hidden;
 }
 
 /* Full Width & Height Image */
 .carousel-image {
   width: 100%;
   height: 100%;
-  object-position: top;
+  /* object-position: top; */
   /* object-position: bottom; */
   object-fit: cover; /* Ensures image covers the area without distortion */
 }
@@ -77,21 +77,20 @@
   transition: 0.3s ease-in-out;
 }
 .carousel-slide a.btn-1 {
-    position: absolute;
-    top: 90%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    padding: 12px 25px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    background-color: #9acd32;
-    color: white;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: 0.3s ease-in-out;
-  }
-  
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: #9acd32;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
 
 .carousel-slide a.btn:hover {
   background-color: #9acd32;
@@ -119,32 +118,31 @@
 /* Custom Navigation Buttons */
 .custom-prev-button,
 .custom-next-button {
-    position: absolute;
-    top: 50%; /* Center vertically */
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    font-size: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 3;
-    transition: background 0.3s ease;
+  position: absolute;
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 3;
+  transition: background 0.3s ease;
 }
 
 .custom-prev-button {
-    left: 20px; /* Align left */
+  left: 20px; /* Align left */
 }
 
 .custom-next-button {
-    right: 20px; /* Align right */
+  right: 20px; /* Align right */
 }
-
 
 .custom-prev-button:hover,
 .custom-next-button:hover {
@@ -152,161 +150,175 @@
 }
 
 .carousel-points {
-    position: absolute;
-    top: 20%;
-    width: 20%;
-    max-width: 250px;
-    color: white;
-    z-index: 2;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    font-size: 1rem;
-    font-weight: 500;
-    backdrop-filter: blur(5px); /* Blur behind text */
-  }
-  .carousel-points {
-    position: absolute;
-    top: 20%;
-    width: 40%;
-    color: black;
-    font-size: 1rem;
-    font-weight: 500;
-    padding: 0;
-    margin: 0;
-    z-index: 2;
-  }
-  
-  .carousel-points {
-    position: absolute;
-    top: 20%;
-    width: 20%;
-    max-width: 250px;
-    color: white;
-    z-index: 2;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    font-size: 1rem;
-    font-weight: 500;
-    counter-reset: item;
-  }
-  
-  .carousel-points.left {
-    left: 5%;
-    text-align: left;
-  }
-  
-  .carousel-points.right {
-    right: 5%;
-    text-align: left;
-  }
-  
-  .carousel-points li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 16px;
-    cursor: default;
-    transition: all 0.3s ease;
-  }
-  
-  /* Number circle */
-  .carousel-points li::before {
-    content: counter(item, decimal-leading-zero);
-    counter-increment: item;
-    background: white;
-    color: black;
-    border: 2px solid #007bff;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    font-weight: bold;
-    display: grid;
-    place-items: center;
-    margin-right: -10px;
-    z-index: 2;
-    position: relative;
-  }
-  
-  /* Text body with arrow style */
-  .carousel-points li::after {
-    content: attr(data-text);
-    background: white;
-    color: black;
-    border: 2px solid #007bff;
-    border-left: none;
-    padding: 10px 20px 10px 30px;
-    margin-left: -15px;
-    clip-path: polygon(0 0, 100% 0, 95% 50%, 100% 100%, 0 100%, 5% 50%);
-    min-width: 180px;
-    font-weight: 500;
-  }
-  
-  /* 🔽 Mobile View Style */
-  @media (max-width: 768px) {
-    .carousel-points {
-      position: static;
-      width: 100%;
-      max-width: none;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      margin-top: 20px;
-      padding-left: 20px;
-    }
-  
-    .carousel-points.left,
-    .carousel-points.right {
-      left: unset;
-      right: unset;
-      text-align: left;
-    }
-  
-    .carousel-points li {
-      font-size: 0.85rem;
-    }
-  
-    .carousel-points li::before {
-      width: 30px;
-      height: 30px;
-      font-size: 0.8rem;
-    }
-  
-    .carousel-points li::after {
-      font-size: 0.85rem;
-      min-width: 140px;
-      padding: 8px 16px 8px 24px;
-    }
-  }
-  
-  
-  /* Hover effect */
-  .carousel-points li:hover::before,
-  .carousel-points li:hover::after {
-    background: #9acd32;
-    color: white;
-    border-color: #9acd32;
-  }
-  
-  
+  position: absolute;
+  top: 20%;
+  width: 20%;
+  max-width: 250px;
+  color: white;
+  z-index: 2;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  backdrop-filter: blur(5px); /* Blur behind text */
+}
+.carousel-points {
+  position: absolute;
+  top: 20%;
+  width: 40%;
+  color: black;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+  z-index: 2;
+}
+
+.carousel-points {
+  position: absolute;
+  top: 20%;
+  width: 20%;
+  max-width: 250px;
+  color: white;
+  z-index: 2;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  counter-reset: item;
+}
+
+.carousel-points.left {
+  left: 5%;
+  text-align: left;
+}
+
+.carousel-points.right {
+  right: 5%;
+  text-align: left;
+}
+
+.carousel-points li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  cursor: default;
+  transition: all 0.3s ease;
+}
+
+/* Number circle */
+.carousel-points li::before {
+  content: counter(item, decimal-leading-zero);
+  counter-increment: item;
+  background: white;
+  color: black;
+  border: 2px solid #007bff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-weight: bold;
+  display: grid;
+  place-items: center;
+  margin-right: -10px;
+  z-index: 2;
+  position: relative;
+}
+
+/* Text body with arrow style */
+.carousel-points li::after {
+  content: attr(data-text);
+  background: white;
+  color: black;
+  border: 2px solid #007bff;
+  border-left: none;
+  padding: 10px 20px 10px 30px;
+  margin-left: -15px;
+  clip-path: polygon(0 0, 100% 0, 95% 50%, 100% 100%, 0 100%, 5% 50%);
+  min-width: 180px;
+  font-weight: 500;
+}
+
+/* 🔽 Mobile View Style */
 @media (max-width: 768px) {
-    .carousel-slide h1 {
-        font-size: medium;
-        top: 36%;
-        left: 50%;
-    }
-    .carousel-slide p{
-        font-size: small;
-        top: 58%;
-        left: 50%;
-    }
- 
-    .carousel-slide a.btn{
-        top: 75%;
-        left: 50%;
-    }
-    .carousel-slide a.btn-1{
-        top: 85%;
-        left: 50%;
-    }
+  .carousel-points {
+    position: static;
+    width: 100%;
+    max-width: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+    padding-left: 20px;
   }
+
+  .carousel-points.left,
+  .carousel-points.right {
+    left: unset;
+    right: unset;
+    text-align: left;
+  }
+
+  .carousel-points li {
+    font-size: 0.85rem;
+  }
+
+  .carousel-points li::before {
+    width: 30px;
+    height: 30px;
+    font-size: 0.8rem;
+  }
+
+  .carousel-points li::after {
+    font-size: 0.85rem;
+    min-width: 140px;
+    padding: 8px 16px 8px 24px;
+  }
+}
+
+/* Hover effect */
+.carousel-points li:hover::before,
+.carousel-points li:hover::after {
+  background: #9acd32;
+  color: white;
+  border-color: #9acd32;
+}
+
+@media (max-width: 768px) {
+  .carousel-slide h1 {
+    font-size: 10px;
+    top: 18%;
+    left: 50%;
+  }
+  .carousel-slide p {
+    font-size: 8px;
+    top: 50%;
+    left: 50%;
+  }
+
+  .carousel-slide a.btn {
+    top: 68%;
+    left: 50%;
+    font-size: 7px;
+  }
+  .carousel-slide a.btn-1 {
+    top: 85%;
+    left: 50%;
+  }
+  .carousel-slide {
+    height: 20vh !important;
+  }
+  .btn-lg {
+    padding: 3px 6px !important;
+  }
+  .carousel-points {
+    display: none;
+  }
+  .custom-prev-button,
+  .custom-next-button {
+    width: 25px !important;
+    height: 25px !important;
+    font-size: 10px !important;
+  }
+}

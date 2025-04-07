@@ -220,9 +220,10 @@ const JobApplicationForm = ({ handleClose }) => {
           }
         `}
       </style>
-      <DialogTitle style={{ color: "#007bff", fontWeight: "bold" }}>
-        <h3>Apply Now / Enquery</h3>
-      </DialogTitle>
+      <DialogTitle sx={{ color: "#00378a", fontWeight: "bold" }}>
+  Apply Now / Enquiry
+</DialogTitle>
+
       <DialogContent>
         <TextField
           fullWidth
@@ -328,7 +329,7 @@ const JobApplicationForm = ({ handleClose }) => {
           ) : (
             <>
               <CloudUpload fontSize="large" />
-              <p>Drag & Drop your resume here or click to upload</p>
+              <p>Drag & Drop your resume or company profile here or click to upload</p>
             </>
           )}
           <input

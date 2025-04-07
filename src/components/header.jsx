@@ -45,7 +45,7 @@ export const Header = ({ data, carousel }) => {
   if (!carousel?.slides?.length) return <h1>Loading...</h1>;
 
   return (
-    <header id="header">
+    <header id="header" style={{marginTop:"8rem"}}>
       <div className="intro">
         <div className="overlay">
           <div className="row">
@@ -59,7 +59,7 @@ export const Header = ({ data, carousel }) => {
                 autoPlay={true}
                 interval={5000}
                 stopOnHover={true}
-                showIndicators={true}
+                showIndicators={false}
                 renderArrowPrev={(clickHandler, hasPrev) =>
                   hasPrev && (
                     <button
