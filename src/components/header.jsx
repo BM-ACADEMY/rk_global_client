@@ -132,6 +132,7 @@ export const Header = ({ data, carousel }) => {
                       <a
                         href={`https://wa.me/${mobile}`}
                         className="btn btn-1 btn-custom btn-lg"
+                    
                         target="_blank"
                         rel="noopener noreferrer"
                       >

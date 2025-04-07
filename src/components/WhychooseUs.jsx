@@ -66,7 +66,7 @@ export const WhyChooseUs = ({ data }) => {
                       className={`fa ${feature.icon} icon`}
                       style={{
                         fontSize: "40px",
-                        color: "#007bff",
+                        color: "#00378a",
                         transition: "color 0.3s ease-in-out",
                       }}
                     ></i>

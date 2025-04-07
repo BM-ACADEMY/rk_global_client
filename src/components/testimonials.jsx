@@ -64,7 +64,7 @@ export const Testimonials = ({ data }) => {
                   height: "70px",
                   borderRadius: "50%",
                   objectFit: "cover",
-                  border: "3px solid #007bff",
+                  border: "3px solid #00378a",
                 }}
               />
               <div className="testimonial-info">
@@ -91,7 +91,7 @@ export const Testimonials = ({ data }) => {
 
             <div className="testimonial-stars" data-aos="pulse">
               {[...Array(d.rating)].map((_, index) => (
-                <FaStar key={index} color="#007bff" size={20} />
+                <FaStar key={index} color="#00378a" size={20} />
               ))}
             </div>
           </SwiperSlide>
