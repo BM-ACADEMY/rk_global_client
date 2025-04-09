@@ -7,7 +7,7 @@
   "HeaderData": {
     "slides": [
       {
-        "image": "img/header/header-1.jpg",
+        "image": "img/header/1.png",
         "text": "We are Hiring",
         "description": "Enterprise IT Services That Empower Innovation and Operational Excellence.Your Strategic IT Partner for Transformation and Growth.",
         "points": [""],
@@ -15,7 +15,7 @@
         "call-button": ""
       },
       {
-        "image": "img/header/header-4.jpg",
+        "image": "img/header/4.png",
         "text": "Build Skills. Boost Careers. Bridge the Gap",
         "description": "Empowering individuals and organizations through skill-focused, real-world training programs. ",
         "points": [
@@ -31,7 +31,7 @@
         "call-button": ""
       },
       {
-        "image": "img/header/header-2.jpg",
+        "image": "img/header/2.png",
         "text": "Your Global Trade Partner for Industrial Growths",
         "description": "We specialize in the import and export of industrial machinery and spare parts, offering reliable sourcing, timely delivery, and custom solutions for your business needs.",
         "points": [""],
@@ -39,7 +39,7 @@
         "call-button": ""
       },
       {
-        "image": "img/header/header-5.jpg",
+        "image": "img/header/5.png",
         "text": "Your End-to-End IT Partner for a Smarter Tomorrow",
         "description": "We deliver secure, reliable, and customized IT services that align with your business goals and accelerate growth.",
         "points": [""],
@@ -47,7 +47,7 @@
         "call-button": ""
       },
       {
-        "image": "img/header/header-3.jpg",
+        "image": "img/header/3.png",
         "text": "Precision Metal Fabrication That Powers Performance",
         "description": "From CNC to VNC cutting, we provide accurate and efficient metal fabrication services tailored to industrial and commercial applications.",
         "points": [""],

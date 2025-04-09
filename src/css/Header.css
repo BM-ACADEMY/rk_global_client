@@ -318,6 +318,9 @@
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
+  .carousel-slide {
+    height: 580px !important;
+  }
   .carousel-slide h1 {
 
     top: 20%;

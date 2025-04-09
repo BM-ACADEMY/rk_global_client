@@ -45,7 +45,7 @@ export const Header = ({ data, carousel }) => {
   if (!carousel?.slides?.length) return <h1>Loading...</h1>;
 
   return (
-    <header id="header" style={{marginTop:"8rem"}}>
+    <header id="header" style={{ marginTop: "8rem" }}>
       <div className="intro">
         <div className="overlay">
           <div className="row">
@@ -95,25 +95,25 @@ export const Header = ({ data, carousel }) => {
                     <p>{slide.description}</p>
 
                     {slide.points && slide.points.length > 0 && (
-  <>
-    <ul className="carousel-points left">
-      {slide.points
-        .filter(p => p && p.trim() !== "")
-        .slice(0, Math.ceil(slide.points.length / 2))
-        .map((point, idx) => (
-          <li key={`left-${idx}`} data-text={point}></li>
-        ))}
-    </ul>
-    <ul className="carousel-points right">
-      {slide.points
-        .filter(p => p && p.trim() !== "")
-        .slice(Math.ceil(slide.points.length / 2))
-        .map((point, idx) => (
-          <li key={`right-${idx}`} data-text={point}></li>
-        ))}
-    </ul>
-  </>
-)}
+                      <>
+                        <ul className="carousel-points left">
+                          {slide.points
+                            .filter((p) => p && p.trim() !== "")
+                            .slice(0, Math.ceil(slide.points.length / 2))
+                            .map((point, idx) => (
+                              <li key={`left-${idx}`} data-text={point}></li>
+                            ))}
+                        </ul>
+                        <ul className="carousel-points right">
+                          {slide.points
+                            .filter((p) => p && p.trim() !== "")
+                            .slice(Math.ceil(slide.points.length / 2))
+                            .map((point, idx) => (
+                              <li key={`right-${idx}`} data-text={point}></li>
+                            ))}
+                        </ul>
+                      </>
+                    )}
 
                     <a
                       href="#"
@@ -130,7 +130,6 @@ export const Header = ({ data, carousel }) => {
                       <a
                         href={`https://wa.me/+91${mobile}`}
                         className="btn btn-1 btn-custom btn-lg"
-                    
                         target="_blank"
                         rel="noopener noreferrer"
                       >
