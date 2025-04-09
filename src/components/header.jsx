@@ -94,28 +94,26 @@ export const Header = ({ data, carousel }) => {
                     <h1>{slide.text}</h1>
                     <p>{slide.description}</p>
 
-                    {slide.points &&
-                      slide.points.filter((p) => p.trim() !== "").length >
-                        0 && (
-                        <>
-                          <ul className="carousel-points left">
-                            {slide.points
-                              .filter((p) => p.trim() !== "")
-                              .slice(0, Math.ceil(slide.points.length / 2))
-                              .map((point, idx) => (
-                                <li key={idx} data-text={point}></li>
-                              ))}
-                          </ul>
-                          <ul className="carousel-points right">
-                            {slide.points
-                              .filter((p) => p.trim() !== "")
-                              .slice(Math.ceil(slide.points.length / 2))
-                              .map((point, idx) => (
-                                <li key={idx} data-text={point}></li>
-                              ))}
-                          </ul>
-                        </>
-                      )}
+                    {slide.points && slide.points.length > 0 && (
+  <>
+    <ul className="carousel-points left">
+      {slide.points
+        .filter(p => p && p.trim() !== "")
+        .slice(0, Math.ceil(slide.points.length / 2))
+        .map((point, idx) => (
+          <li key={`left-${idx}`} data-text={point}></li>
+        ))}
+    </ul>
+    <ul className="carousel-points right">
+      {slide.points
+        .filter(p => p && p.trim() !== "")
+        .slice(Math.ceil(slide.points.length / 2))
+        .map((point, idx) => (
+          <li key={`right-${idx}`} data-text={point}></li>
+        ))}
+    </ul>
+  </>
+)}
 
                     <a
                       href="#"
