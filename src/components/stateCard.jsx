@@ -4,11 +4,13 @@ import "../css/StateCard.css"
 
 export const StatsCards = () => {
   const cards = [
-    { number: 30, title: 'Reward' },
-    { number: 350, title: 'Dedicated Developers' },
-    { number: 160, title: 'Project Completed' },
-    { number: 200, title: 'Happy Clients' }
+    { number: 20, title: 'Reward' },
+    { number: 200, title: 'Dedicated Developers' },
+    { number: `160+`, title: 'Project Completed' },
+    { number: `100+` , title: 'Happy Clients' }
   ];
+
+
 
   // Animation variants for Framer Motion
   const cardVariants = {
