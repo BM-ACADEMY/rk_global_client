@@ -2,7 +2,8 @@
   display: flex;
   justify-content: center;
   padding: 40px 0;
-  background-color: #222;
+  /* background-color: #222; */
+  /* background: url('/img/curve.png') no-repeat center/cover, #222 !important; */
   color: white;
 }
 

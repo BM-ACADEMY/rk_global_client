@@ -201,7 +201,10 @@ export const Contact = ({ data = {} }) => {
 
   return (
     <div>
-      <div id="contact" className="contact-container">
+      <div id="contact" className="contact-container"   style={{
+    background: "url('/img/curve.png') no-repeat center/cover",
+    backgroundColor: "#222",
+  }}>
         <div className="container">
           <div className="py-md-4 py-lg-4">
             <div className="contact-content">
