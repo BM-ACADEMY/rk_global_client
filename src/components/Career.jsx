@@ -98,7 +98,6 @@ const JobApplicationForm = ({ handleClose }) => {
       setErrors({ ...errors, file: "" });
     }
   };
-
   // Prevent default behavior for drag events
   const handleDragOver = (e) => e.preventDefault();
 

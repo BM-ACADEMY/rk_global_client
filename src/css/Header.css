@@ -161,33 +161,8 @@
   margin: 0;
   font-size: 1rem;
   font-weight: 500;
-  backdrop-filter: blur(5px); /* Blur behind text */
-}
-.carousel-points {
-  position: absolute;
-  top: 20%;
-  width: 40%;
-  color: black;
-  font-size: 1rem;
-  font-weight: 500;
-  padding: 0;
-  margin: 0;
-  z-index: 2;
-}
-
-.carousel-points {
-  position: absolute;
-  top: 20%;
-  width: 20%;
-  max-width: 250px;
-  color: white;
-  z-index: 2;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  font-size: 1rem;
-  font-weight: 500;
-  counter-reset: item;
+  /* backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.15);  */
 }
 
 .carousel-points.left {
@@ -204,44 +179,33 @@
   display: flex;
   align-items: center;
   margin-bottom: 16px;
+  width: 100% !important;
   cursor: default;
   transition: all 0.3s ease;
 }
 
-/* Number circle */
+/* ❌ Remove number circle */
 .carousel-points li::before {
-  content: counter(item, decimal-leading-zero);
-  counter-increment: item;
-  background: white;
-  color: black;
-  border: 2px solid #007bff;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  font-weight: bold;
-  display: grid;
-  place-items: center;
-  margin-right: -10px;
-  z-index: 2;
-  position: relative;
+  content: none !important;
 }
 
-/* Text body with arrow style */
-.carousel-points li::after {
-  content: attr(data-text);
-  background: white;
-  color: black;
-  border: 2px solid #007bff;
-  border-left: none;
-  padding: 10px 20px 10px 30px;
-  margin-left: -15px;
-  clip-path: polygon(0 0, 100% 0, 95% 50%, 100% 100%, 0 100%, 5% 50%);
-  min-width: 180px;
-  font-weight: 500;
-}
+/* ✅ Transparent white bubble for text */
+  .carousel-points li::after {
+    content: attr(data-text);
+    background: rgba(255, 255, 255, 0.75); 
+    color: #000;
+    border-radius: 8px;
+    padding: 10px 20px;
+    margin-left: 0;
+    min-width: 180px;
+    font-weight: 500;
+    border: none;
+    clip-path: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
 
-/* 🔽 Mobile View Style */
-@media (max-width: 768px) {
+
+/* @media (max-width: 768px) {
   .carousel-points {
     position: static;
     width: 100%;
@@ -275,7 +239,7 @@
     min-width: 140px;
     padding: 8px 16px 8px 24px;
   }
-}
+} */
 
 /* Hover effect */
 .carousel-points li:hover::before,
@@ -287,8 +251,8 @@
 
 @media (max-width: 768px) {
   .carousel-slide h1 {
-    font-size: 10px;
-    top: 15%;
+    font-size: 9px;
+    top: 10%;
     left: 50%;
   }
   .carousel-slide p {
@@ -307,18 +271,94 @@
     left: 50%;
   }
   .carousel-slide {
-    height: 20vh !important;
+    height: 30vh !important;
   }
   .btn-lg {
     padding: 3px 6px !important;
   }
-  .carousel-points {
+  /* .carousel-points {
     display: none;
-  }
+  } */
   .custom-prev-button,
   .custom-next-button {
     width: 25px !important;
     height: 25px !important;
     font-size: 10px !important;
   }
+  .carousel-points {
+    width: 35%; /* Slightly wider to avoid crowding */
+    bottom: 3%; /* Closer to bottom */
+    top: auto !important;
+    font-size: 0.7rem;
+  }
+
+  .carousel-points.left {
+    left: 2% !important; /* Move left column closer to edge */
+    text-align: left; /* Keep left alignment (remove if unwanted) */
+  }
+
+  .carousel-points.right {
+    right: 2% !important; /* Move right column closer to edge */
+    text-align: left; 
+
+  }
+
+  .carousel-points li {
+    margin-bottom: 5px; /* Tighter spacing */
+  }
+
+  .carousel-points li::after {
+    min-width: 100px !important; /* Reduced from 180px */
+    padding: 6px 5px;
+    font-size: 0.5rem !important;
+    /* text-align: center;  */
+    margin-left: 0; /* Reset any forced left margin */
+    white-space: normal; /* Allow text wrapping */
+    display: inline-block; /* Prevent full-width stretching */
+  }
 }
+@media (max-width: 992px) {
+  .carousel-slide h1 {
+
+    top: 20%;
+    left: 50%;
+  }
+  .carousel-slide p {
+
+    top: 50%;
+    left: 50%;
+  }
+
+  .carousel-slide a.btn {
+    top: 75%;
+    left: 50%;
+
+  }
+  .carousel-slide a.btn-1 {
+    top: 90%;
+    left: 50%;
+  }
+  .carousel-points {
+    width: 55%; /* Slightly wider to avoid crowding */
+    bottom: 3%; /* Closer to bottom */
+    top: auto !important;
+    font-size: 1.2rem;
+  }
+
+
+
+  .carousel-points li {
+    margin-bottom: 5px; /* Tighter spacing */
+  }
+
+  .carousel-points li::after {
+    min-width: 100px !important; /* Reduced from 180px */
+    padding: 10px 10px;
+    /* font-size: 0.5rem !important; */
+    /* text-align: center;  */
+    margin-left: 0; /* Reset any forced left margin */
+    white-space: normal; /* Allow text wrapping */
+    display: inline-block; /* Prevent full-width stretching */
+  }
+}
+

@@ -7,7 +7,7 @@ export const MetalFabric = ({ data }) => {
 <div id="metal" className="metal-container container" data-aos="fade-up">
   <div className="metal-wrapper container">
     <div className="section-title" data-aos="zoom-in">
-      <h2> Main Industrial and Commercial Divisions</h2>
+      <h2> Industrial and Commercial Divisions</h2>
       <p>
       Robust Engineering Solutions for Industrial and Commercial Excellence. Enabling Seamless Trade Through Strategic Global Partnerships
       </p>

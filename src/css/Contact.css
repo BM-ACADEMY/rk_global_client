@@ -21,10 +21,10 @@
 }
 
 .logo-img {
-  width: 110px;
+  width: 250px;
   height: auto;
   margin-bottom: 10px;
-  background-color: white;
+  /* background-color: white; */
   padding: 8px;
 }
 

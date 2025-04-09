@@ -53,6 +53,7 @@ import {MetalFabric} from "./components/MetalFabric";
 import { WhyChooseUs } from "./components/WhychooseUs";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { StatsCards } from "./components/stateCard";
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000,
@@ -84,15 +85,16 @@ const App = () => {
   return (
     <div>
       <Navigation data={landingPageData.Header || {}} />
-      <div className="main-content">
+ 
         <Header data={landingPageData.Header || {}} carousel={landingPageData.HeaderData || {}} />
         <About data={landingPageData.About} />
         <Services data={landingPageData.Services} />
         <MetalFabric data={landingPageData.MetalFabric || []} />
         <Testimonials data={landingPageData.Testimonials || []} />  
         <WhyChooseUs data={landingPageData.WhyChooseUs} />
+        <StatsCards />
         <Contact data={landingPageData.Contact} />
-      </div>
+  
     </div>
   );
   

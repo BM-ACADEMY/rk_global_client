@@ -1,6 +1,6 @@
 {
   "Header": {
-    "logo": "img/logo.png",
+    "logo": "img/rk-logo.png",
     "title": "We are a Landing Page",
     "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum."
   },
@@ -19,7 +19,7 @@
         "text": "Build Skills. Boost Careers. Bridge the Gap",
         "description": "Empowering individuals and organizations through skill-focused, real-world training programs. ",
         "points": [
-          "Course Focus Areas",
+    
           "IT & Software Development",
           "Industrial Skills & Safety",
           "HR, Payroll & Recruitment Training",
@@ -236,7 +236,7 @@
     }
   ],
   "Contact": {
-    "logo": "img/logo.png",
+    "logo": "img/rk-logo.png",
     "address": "Erode TN",
     "phone": "+91 87605 77352",
     "mobile": "8760577352",
@@ -251,7 +251,7 @@
       { "name": "Home", "url": "header" },
       { "name": "About", "url": "about" },
       { "name": "IT Services", "url": "services" },
-      { "name": " Main Industrial and Commercial Divisions", "url": "works" },
+      { "name": "Industrial and Commercial Divisions", "url": "works" },
       { "name": "Enquiry ", "url": "career" },
       { "name": "Contact us", "url": "contact" }
     ],

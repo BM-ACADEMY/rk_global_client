@@ -37,12 +37,12 @@ export const About = ({ data }) => {
           className="row align-items-center bg-white shadow-lg rounded p-4"
           data-aos="fade-up"
         >
-          <div className="col-md-6 text-center" data-aos="fade-right">
+          <div className="col-md-6 " data-aos="fade-right">
             <img
               src="img/about.jpg"
               alt="About Us"
               className="img-fluid w-100 rounded shadow-sm about-img"
-              style={{ maxWidth: "100%", height: "35%", objectFit: "cover" }}
+              // style={{ maxWidth: "100%", height: "35%", objectFit: "cover" }}
             />
           </div>
           <div className="col-md-6" data-aos="fade-left">

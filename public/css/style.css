@@ -83,11 +83,13 @@ hr {
 #menu {
   padding: 15px;
   transition: all 0.8s;
+
 }
 #menu.navbar-default {
   background-color: #fff;
   border-color: rgba(231, 231, 231, 0);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+ height: 120px;
 }
 #menu a.navbar-brand {
   font-family: "Raleway", sans-serif;
@@ -114,8 +116,7 @@ hr {
   bottom: -1px;
   width: 0;
   height: 2px;
-  /* background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
-   */
+
    background: linear-gradient(to right, #00378a 0%, #9acd32 100%);
   content: "";
   transition: width 0.2s;
@@ -128,19 +129,7 @@ hr {
 .navbar-default .navbar-nav > .active > a:focus {
   background-color: transparent;
 }
-/* .navbar-default .navbar-nav > .active > a:after,
-.navbar-default .navbar-nav > .active > a:hover:after,
-.navbar-default .navbar-nav > .active > a:focus:after {
-  display: block !important;
-  position: absolute !important;
-  left: 0 !important;
-  bottom: -1px !important;
-  width: 100% !important;
-  height: 2px !important;
-  background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%) !important;
-  content: "" !important;
-  transition: width 0.2s !important;
-} */
+
 .navbar{
   margin-bottom: 0px !important;
 }
@@ -336,12 +325,11 @@ header .intro-text {
 
 
 #whychoose {
-  padding: 100px 0;
+  padding: 30px 0;
   background: white
 
 }
 /* Services Section */
-
 
 #services {
   padding: 100px 0;
@@ -500,7 +488,7 @@ header .intro-text {
 /* Contact Section */
 #contact {
   /* padding: 100px 0 60px; */
-  background-color: #00378a;
+  background-color: #23272d;
   /* background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%); */
   color: rgba(255, 255, 255, 0.75);
 }

@@ -311,39 +311,65 @@ export const Contact = ({ data = {} }) => {
 
                 {/* Phone */}
                 <div className="mb-3">
-                  <div className="d-flex align-items-center gap-2">
+                  <a
+                    href={`tel:${phone || "+11234561234"}`}
+                    style={{ textDecoration: "none", color: "inherit" }}
+                  >
+                    <div className="d-flex align-items-center gap-2">
                     <i className="fa fa-phone"></i>
-                    <span style={{ fontWeight: "bold", marginLeft: "8px" }}>
-                      Phone
-                    </span>
-                  </div>
-                  <p className="mb-0" style={{ marginTop: "8px" }}>
-                    {phone || "+1 123 456 1234"}
-                  </p>
+                      <span style={{ fontWeight: "bold", marginLeft: "8px" }}>
+                        Phone
+                      </span>
+                    </div>
+                    <p className="mb-0" style={{ marginTop: "8px" }}>
+                      {phone || "+1 123 456 1234"}
+                    </p>
+                  </a>
                 </div>
 
                 {/* Email */}
                 <div className="mb-3">
-                  <div className="d-flex align-items-center gap-2">
+                  <a
+                    href={`mailto:${email || "info@company.com"}`}
+                    style={{ textDecoration: "none", color: "inherit" }}
+                  >
+                    <div className="d-flex align-items-center gap-2">
                     <i className="fa fa-envelope"></i>
-                    <span style={{ fontWeight: "bold", marginLeft: "8px" }}>
-                      Email
-                    </span>
-                  </div>
-                  <p className="mb-0" style={{ marginTop: "8px" }}>
-                    {email || "info@company.com"}
-                  </p>
+                      <span style={{ fontWeight: "bold", marginLeft: "8px" }}>
+                        Email
+                      </span>
+                    </div>
+                    <p className="mb-0" style={{ marginTop: "8px" }}>
+                      {email || "info@company.com"}
+                    </p>
+                  </a>
                 </div>
 
                 <div
                   className="social"
                   style={{ display: "flex", gap: "10px" }}
                 >
-                  <a href={instagram || "#"}>
-                    <i className="fa fa-instagram"></i>
+                  <a
+                    href={instagram || "#"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="img/social-icons/instagram.png"
+                      alt="Instagram"
+                      width="30"
+                    />
                   </a>
-                  <a href={linkedin || "#"}>
-                    <i className="fa fa-linkedin"></i>
+                  <a
+                    href={linkedin || "#"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="img/social-icons/linkedin.png"
+                      alt="LinkedIn"
+                      width="30"
+                    />
                   </a>
                 </div>
               </div>
@@ -355,7 +381,7 @@ export const Contact = ({ data = {} }) => {
       {/* Floating Buttons */}
       <div className="floating-icons">
         <a
-          href={`https://wa.me/${mobile}`}
+          href={`https://wa.me/+91${mobile}`}
           className="floating-btn whatsapp"
           target="_blank"
           rel="noopener noreferrer"

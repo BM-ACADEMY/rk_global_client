@@ -383,7 +383,14 @@ export const Navigation = (props) => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [mobileMenuOpen]);
+  
   useEffect(() => {
     const handleScroll = () => {
       const sections = document.querySelectorAll("section[id]");
@@ -464,23 +471,15 @@ export const Navigation = (props) => {
                 src={logo}
                 alt="Company Logo"
                 className="logo"
-                style={{
-                  maxHeight: "60px",
-                  width: "120px",
-                  marginRight: "10px",
-                }}
+                width="210"
+                height="auto"
+                // style={{
+                //   maxHeight: "60px",
+                //   width: "120px",
+                //   marginRight: "10px",
+                // }}
               />
-              <div
-                className="tagline"
-                style={{
-                  fontSize: "7px",
-                  color: "#00378a",
-                  marginLeft: "4.2rem",
-                  textAlign: "start",
-                }}
-              >
-                Ultimate Of All Time
-              </div>
+        
             </a>
           </div>
 
@@ -563,7 +562,7 @@ export const Navigation = (props) => {
                     handleDropdown("metal-fabrication");
                   }}
                 >
-                  Main Industrial and Commercial Divisions{" "}
+                  Industrial and Commercial Divisions{" "}
                   {openDropdown === "metal-fabrication" ? (
                     <i className="fa fa-caret-up"></i>
                   ) : (
