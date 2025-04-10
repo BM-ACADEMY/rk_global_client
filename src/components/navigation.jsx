@@ -473,11 +473,7 @@ export const Navigation = (props) => {
                 className="logo"
                 width="210"
                 height="auto"
-                // style={{
-                //   maxHeight: "60px",
-                //   width: "120px",
-                //   marginRight: "10px",
-                // }}
+            
               />
         
             </a>

@@ -182,7 +182,9 @@ line-height: 3px !important;
   width: 200px;
   margin-right: 10px;
 } */
-
+.logo{
+  margin-top: 1rem !important;
+}
 @media (max-width: 992px) {
   .navbar-collapse {
     position: fixed;
@@ -231,6 +233,7 @@ line-height: 3px !important;
   .logo {
     max-height: 120px !important;
     width: 110px !important;
+    margin-top: 0 !important;
   }
 
   .tagline {
@@ -255,6 +258,7 @@ line-height: 3px !important;
     max-width: 190px !important;
     width: auto;
     height: auto;
+    margin-top: 0 !important;
    }
 }
 
