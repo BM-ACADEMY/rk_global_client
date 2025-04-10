@@ -251,6 +251,11 @@ line-height: 3px !important;
   .dropdown-submenu:hover > .dropdown-menu {
     display: block;
   }
+  .logo{
+    max-width: 190px !important;
+    width: auto;
+    height: auto;
+   }
 }
 
 @media (max-width: 992px) {
@@ -270,7 +275,9 @@ line-height: 3px !important;
   .navbar-collapse.collapse {
     display: none !important;
   }
-
+ .logo{
+  width: 170px !important;
+ }
   .navbar-collapse.collapse.in {
     display: block !important;
   }

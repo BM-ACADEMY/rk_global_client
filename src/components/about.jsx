@@ -39,7 +39,7 @@ export const About = ({ data }) => {
         >
           <div className="col-md-6 " data-aos="fade-right">
             <img
-              src="img/about.jpg"
+              src="img/about.png"
               alt="About Us"
               className="img-fluid w-100 rounded shadow-sm about-img"
               // style={{ maxWidth: "100%", height: "35%", objectFit: "cover" }}
