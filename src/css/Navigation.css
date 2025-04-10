@@ -175,16 +175,13 @@ line-height: 3px !important;
 
 .navbar-brand {
   line-height: 3px !important;
-}
-
-/* .logo {
-  max-height: 150px;
-  width: 200px;
-  margin-right: 10px;
-} */
-.logo{
   margin-top: 1rem !important;
 }
+
+
+/* .logo{
+  margin-top: 1rem !important;
+} */
 @media (max-width: 992px) {
   .navbar-collapse {
     position: fixed;
@@ -235,7 +232,10 @@ line-height: 3px !important;
     width: 110px !important;
     margin-top: 0 !important;
   }
+  .navbar-brand {
 
+    margin-top: 0px !important;
+  }
   .tagline {
     font-size: 7px !important;
     margin-left: 4.4rem !important;
@@ -281,6 +281,7 @@ line-height: 3px !important;
   }
  .logo{
   width: 170px !important;
+  margin-top: 0 !important;
  }
   .navbar-collapse.collapse.in {
     display: block !important;
