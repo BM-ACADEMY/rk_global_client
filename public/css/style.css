@@ -222,8 +222,8 @@ a:focus,
   width: 100%;
   padding: 0;
   height: 60vh;
-  /* background: url(../img/intro-bg.jpg) center center no-repeat; 
-  /* background-color: #e5e5e5;s 
+  /* background: url(../img/intro-bg.jpg) center center no-repeat;
+  /* background-color: #e5e5e5;s
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -312,7 +312,7 @@ header .intro-text {
   padding-right: 8px;
 } */
 #about img {
-  
+
   /* margin-top: 10px; */
   background: #fff;
   border-right: 0;
@@ -577,14 +577,7 @@ label {
 .form-control:-ms-input-placeholder {
   color: #777;
 }
-/* #contact .contact-item {
-  margin: 20px 0;
-}
-/* #contact .contact-item span {
-  color: rgba(255, 255, 255, 1);
-  margin-bottom: 10px;
-  display: block;
-} */ */
+
 #contact .contact-item i.fa {
   margin-right: 10px;
 }

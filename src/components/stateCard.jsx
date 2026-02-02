@@ -25,7 +25,7 @@ export const StatsCards = () => {
   };
 
   return (
-    <div className="container my-5" id="stateCard">
+    <div className="container my-5 bg-white" id="stateCard">
     <div className="row">
       {cards.map((card, index) => (
         <div key={index} className="col-12 col-sm-6 col-lg-3 mb-4">

@@ -1,22 +1,4 @@
-/* @media screen and (max-width: 400px) {
-  #features {
-    padding: 20px;
-    width: 100%;
-  }
-  #about,
-  #services,
-  #testimonials,
-  #team,
-  #contact,
-  #metal,
-  #footer {
-    width: 111%;
-  }
 
-  #portfolio {
-    width: 100%;
-  }
-} */
 [data-aos] {
   transition: all 1s ease-in-out !important;
 }
